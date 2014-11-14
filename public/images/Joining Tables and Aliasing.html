@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://teamtreehouse.com/library/joining-tables-and-aliasing-2 -->
+<html lang="en" class="treehouse-layout code-challenges-controller show-action desktop-nav-collapsed chrome webkit osx command-challenge loaded" id="treehouse-layout" data-featurette="treehouse-layout"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Joining Tables and Aliasing</title>
+    <meta charset="UTF-8">
+      <meta name="description" content="Treehouse is the fastest, easiest way to learn to code, make apps, and start a business. Tutorials in CSS, HTML, Ruby, JavaScript, iOS, and more.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<script async="" src="./Joining Tables and Aliasing_files/fbds.js"></script><script type="text/javascript" async="" src="./Joining Tables and Aliasing_files/plusone.js"></script><script id="facebook-jssdk" src="./Joining Tables and Aliasing_files/all.js"></script><script id="twitter-wjs" src="./Joining Tables and Aliasing_files/widgets.js"></script><script type="text/javascript" async="" src="http://stats.g.doubleclick.net/dc.js"></script><script type="text/javascript" async="" src="http://cdn.mxpnl.com/libs/mixpanel-2.2.min.js"></script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"beacon-4.newrelic.com","errorBeacon":"bam.nr-data.net","licenseKey":"d98036d1cc","applicationID":"1824378","transactionName":"cQ5eRRQNCQ8BFhZbWFYEb1IOAwkPAQpeXUQdElheEQ==","queueTime":1,"applicationTime":326,"agentToken":null,"agent":"js-agent.newrelic.com/nr-476.min.js"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o?o:e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=u(e),f=c.length,s=i(a,o,r),p=0;f>p;p++)c[p].apply(s,n);return s}function a(t,e){f[t]=u(t).concat(e)}function u(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:u,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):(o[t]||(o[t]=[]),void o[t].push(e))}var r=t("ee").create(),o={};e.exports=n,n.ee=r,r.q=o},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],G9z0Bl:[function(t,e){function n(){var t=l.info=NREUM.info;if(t&&t.agent&&t.licenseKey&&t.applicationID&&c&&c.body){l.proto="https"===p.split(":")[0]||t.sslForHttp?"https://":"http://",a("mark",["onload",i()]);var e=c.createElement("script");e.src=l.proto+t.agent,c.body.appendChild(e)}}function r(){"complete"===c.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),u=window,c=u.document,f="addEventListener",s="attachEvent",p=(""+location).split("?")[0],l=e.exports={offset:i(),origin:p,features:{}};c[f]?(c[f]("DOMContentLoaded",o,!1),u[f]("load",n,!1)):(c[s]("onreadystatechange",r),u[s]("onload",n)),a("mark",["firstbyte",i()])},{handle:"D5DuLP"}]},{},["G9z0Bl"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="google-site-verification" content="4Ga-viQvIZUFNQXu323xpp_24RDlLooxwlpnXhinjPA">
+    <meta name="msvalidate.01" content="F0716E70B7DD3B8C892B48891CA4B541">
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="M5lm1ZNXviHTKVtV+CHbr/tmLin6tHdNa3Y9O7fA1Ws=" name="csrf-token">
+
+        <link href="https://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/treehouse-949fae2a443c2bbbbf01b64cf90d0d84.css" media="screen" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Joining Tables and Aliasing_files/fonts.css">
+    
+
+    
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/apple-touch-icon-57x57-precomposed-2723a124dd5bb03d4ef8532c715a4a78.png">
+    
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://wac.a8b5.edgecastcdn.net/80A8B5/static-assets/assets/apple-touch-icon-114x114-precomposed-989f2de81aab2108644069050a99d2c7.png">
+    
+
+    
+
+
+      <!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+  for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="//cdn.mxpnl.com/libs/mixpanel-2.2.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+  mixpanel.init("7b38bdec31b0d42dc60b2c77d946e5ad");</script><!-- end Mixpanel -->
+
+  <!-- start GoogleAnalytics -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    window._gaq = _gaq;
+    _gaq.push(['_setAccount', 'UA-25670760-9']);
+
+    _gaq.push(['_setCustomVar', 1, 'logged-in', 'true', 3]);
+
+    _gaq.push(['_setCustomVar', 3, 'account-state', 'active', 3]);    
+
+      _gaq.push(['_setCustomVar', 2, 'member', 'true', 1]);
+
+    _gaq.push(['_trackPageview']);
+
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  <!-- end GoogleAnalytics -->
+
+
+    
+  <link type="image/x-icon" rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAACb0lEQVQ4T4WTX0hTcRTHz/ndO/cHs+kcA1+CBAXroUHkcDb2UGHQU2T4YGEvOkmzbW+JTBe+RDr/RBv2MFJSMYOee1lOF/RkERGUPUaUmqKxOd39nX7b3c3ZrH5v59zv+fy+5/7OQfjL6Vj0NjGGfYRAnEPfRONw7DAp/pnsiPvrmAz3Rf7i729EH8PO4dp/Am7Eu60GWRcAwg5AkAvFRPAw4hy6mc21x/yVkpxUwmfDG9k458CT8F9DpAciLCu6hWhzR9mribrGVz0LPjvq4CUQcALqjDhDszlAZ8K3DYilxRZpVSFqnXCGXkA/MM9532tEPJ3XrYcbhipVwCs/7RfTVSL2IcN39SkdfXriGN9SXXpbENmMphMFO5GGIWMRQCHlkjBoYhKr5hl6POEa+ZoHDArAnf8CBHkbiMbWkQatcvpocJI5OFFAtHiqsMVNE1BFEi4XOchwfvJRY+i9mIN2ZFAzML17RfR9TCuu6O0FyWaDn3NzkFpcfFME4KTcApTWxPxMEfGWuzOZp1rxkdZWMNTXg3CoApaW1Gc8+BNVuXimxE76x7l7z0pT2Vhvt0NZWxsAYypgfh5S8XgekPB9Fj0ePzg8yvWIc2Tqe1cXoV4PlkAAQJJA2dgAuaoKtqJRSC8v5wFLPbXApDExSBcKnnOFOEwGZ3eDpc3NYHS5gJJJQFkMaUkJKGtrsDk6qgK0k1sgCcUe4AktNzCdBlNTExgdjtxWSeXlAAJyKCBb5I655doSeztD7Bcgq/d5GszJ/UvMPT2gq67WWnhbtI2atC1222zQSx73O6XOtvDtjAFZTaHbPc6/1Fks3b8AFXoHcvgQxYsAAAAASUVORK5CYII="><script async="true" type="text/javascript" src="http://a.adroll.com/j/roundtrip.js"></script></head>
+
+  <body id="sql_challenge" class="osx chrome webkit " cz-shortcut-listen="true">
+    <header>
+      <ul id="account-info">
+          <li id="notifications" class="unread" data-layout-element="notifications" data-channel="th-production-4fa684c33ad11473579516dd351008e1">
+            <a href="http://teamtreehouse.com/notifications" title="See all notifications.">
+              <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 26 25">
+<path d="M23.3,18.6c-2.2-1.7-2.4-5-2.4-6.6c0-0.3,0-0.6,0-1c0-4.2-2.6-7.7-6-8.7c0-0.1,0-0.2,0-0.3c0-1.1-0.9-2-2-2
+	s-2,0.9-2,2c0,0.1,0,0.2,0,0.3c-3.5,1-6,4.5-6,8.7c0,0.3,0,0.7,0,1c0,1.6-0.2,5-2.4,6.6C1,19.3,0,20.1,0,21c0,2.2,5.8,4,13,4
+	s13-1.8,13-4C26,20.1,25,19.3,23.3,18.6z M13,23c-5.5,0-10-0.7-10-1.5c0-0.7,3.4-1.3,8-1.5c0,1.1,0.9,2,2,2s2-0.9,2-2
+	c4.6,0.1,8,0.7,8,1.5S18.5,23,13,23z"></path>
+</svg>
+
+              <em class="notifications ">4</em>
+            </a>
+            <div id="notifications-dropdown" class="dropdown right">
+              <h4 class="dropdown-title"><a href="http://teamtreehouse.com/notifications">Notifications</a></h4>
+                <ul>
+                    <li id="notification-176929542" class="unread notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/176929542?redirect_to=%2Flibrary%2Fdates-and-times-in-python">
+  <div class="achievement-hero" style="background-color: #F092B0">
+    <img alt="Dates and Times in Python" src="./Joining Tables and Aliasing_files/cover-python-datetime.png">
+  </div>
+  <p><strong>New Course</strong> • 1 day ago</p>
+  <h3>Dates and Times in Python</h3>
+  <p class="notification-message"></p>
+</a>
+                        <input type="hidden" name="unread[]" value="176929542" class="placeholder-processed">
+                    </li>
+                    <li id="notification-176010092" class="unread notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/176010092?redirect_to=%2Flibrary%2Femberjs">
+  <div class="achievement-hero" style="background-color: #C25975">
+    <img alt="Ember.js" src="./Joining Tables and Aliasing_files/cover-js-ember.png">
+  </div>
+  <p><strong>New Course</strong> • 1 day ago</p>
+  <h3>Ember.js</h3>
+  <p class="notification-message"></p>
+</a>
+                        <input type="hidden" name="unread[]" value="176010092" class="placeholder-processed">
+                    </li>
+                    <li id="notification-175090072" class="unread notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/175090072?redirect_to=%2Flibrary%2Fthe-treehouse-show%2Fepisode-115-touch-events-font-downloads-native-webapps">
+  <div class="achievement-hero" style="background-color: #b7c0c7">
+    <img alt="The Treehouse Show" src="./Joining Tables and Aliasing_files/cover-show-treehouse.png">
+  </div>
+  <p><strong>New Episode</strong> • 1 day ago</p>
+  <h3>Episode 115: Touch Events, Font Downloads, Native Webapps</h3>
+  <p class="notification-message">The Treehouse Show</p>
+</a>
+                        <input type="hidden" name="unread[]" value="175090072" class="placeholder-processed">
+                    </li>
+                    <li id="notification-174151712" class="unread notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/174151712?redirect_to=%2Flibrary%2Ftreehouse-club-mash">
+  <div class="achievement-hero" style="background-color: #C25975">
+    <img alt="Treehouse Club - MASH" src="./Joining Tables and Aliasing_files/cover-jr-mash.png">
+  </div>
+  <p><strong>New Course</strong> • 3 days ago</p>
+  <h3>Treehouse Club - MASH</h3>
+  <p class="notification-message"></p>
+</a>
+                        <input type="hidden" name="unread[]" value="174151712" class="placeholder-processed">
+                    </li>
+                    <li id="notification-173205302" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/173205302?redirect_to=%2Flibrary%2Fswift-enums-and-structs">
+  <div class="achievement-hero" style="background-color: #53BBB4">
+    <img alt="Swift Enums and Structs" src="./Joining Tables and Aliasing_files/cover-ios-swiftstructandenums.png">
+  </div>
+  <p><strong>New Course</strong> • 7 days ago</p>
+  <h3>Swift Enums and Structs</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-172296362" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/172296362?redirect_to=%2Flibrary%2Fgenerate-london-2014%2Fdesigning-for-accessibility">
+  <div class="achievement-hero" style="background-color: #b7c0c7">
+    <img alt="Generate London 2014" src="./Joining Tables and Aliasing_files/cover-conference.png">
+  </div>
+  <p><strong>New Episode</strong> • 7 days ago</p>
+  <h3>Designing for Accessibility</h3>
+  <p class="notification-message">Generate London 2014</p>
+</a>
+                    </li>
+                    <li id="notification-171370302" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/171370302?redirect_to=%2Flibrary%2Fios-local-notifications">
+  <div class="achievement-hero" style="background-color: #53BBB4">
+    <img alt="Ipad default 2x cover workshops" src="./Joining Tables and Aliasing_files/ipad_default_2x_cover-workshops.png">
+  </div>
+  <p><strong>New Workshop</strong> • 9 days ago</p>
+  <h3>iOS Local Notifications</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-170463432" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/170463432?redirect_to=%2Flibrary%2Fsetting-up-a-local-python-environment">
+  <div class="achievement-hero" style="background-color: #F092B0">
+    <img alt="Setting Up a Local Python Environment" src="./Joining Tables and Aliasing_files/cover-python-local.png">
+  </div>
+  <p><strong>New Course</strong> • 9 days ago</p>
+  <h3>Setting Up a Local Python Environment</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-169558012" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/169558012?redirect_to=%2Flibrary%2Fthe-treehouse-show%2Fepisode-114-centering-in-css-responsive-lightboxes-dynamic-animations">
+  <div class="achievement-hero" style="background-color: #b7c0c7">
+    <img alt="The Treehouse Show" src="./Joining Tables and Aliasing_files/cover-show-treehouse.png">
+  </div>
+  <p><strong>New Episode</strong> • 9 days ago</p>
+  <h3>Episode 114: Centering in CSS, Responsive Lightboxes, Dynamic Animations</h3>
+  <p class="notification-message">The Treehouse Show</p>
+</a>
+                    </li>
+                    <li id="notification-168648192" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/168648192?redirect_to=%2Flibrary%2Fhtml-video-and-audio">
+  <div class="achievement-hero" style="background-color: #39ADD1">
+    <img alt="HTML Video and Audio" src="./Joining Tables and Aliasing_files/cover-html-videoaudio.png">
+  </div>
+  <p><strong>New Course</strong> • 10 days ago</p>
+  <h3>HTML Video and Audio</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-167744632" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/167744632?redirect_to=%2Flibrary%2Fecommerce-with-wordpress-and-woocommerce">
+  <div class="achievement-hero" style="background-color: #838CC7">
+    <img alt="Ecommerce with WordPress and WooCommerce" src="./Joining Tables and Aliasing_files/cover-wordpress-ecommerce.png">
+  </div>
+  <p><strong>New Course</strong> • 10 days ago</p>
+  <h3>Ecommerce with WordPress and WooCommerce</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-166821742" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/166821742?redirect_to=%2Flibrary%2Fruby-loops">
+  <div class="achievement-hero" style="background-color: #E15258">
+    <img alt="Ruby Loops" src="./Joining Tables and Aliasing_files/cover-ruby-loops.png">
+  </div>
+  <p><strong>New Course</strong> • 14 days ago</p>
+  <h3>Ruby Loops</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-165918512" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/165918512?redirect_to=%2Flibrary%2Fdebugging-a-web-app-with-chrome-dev-tools">
+  <div class="achievement-hero" style="background-color: #637a91">
+    <img alt="Ipad default 2x cover workshops" src="./Joining Tables and Aliasing_files/ipad_default_2x_cover-workshops.png">
+  </div>
+  <p><strong>New Workshop</strong> • 14 days ago</p>
+  <h3>Debugging a Web App With Chrome Dev Tools</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-165018392" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/165018392?redirect_to=%2Flibrary%2Fgenesis-framework-foundations">
+  <div class="achievement-hero" style="background-color: #838CC7">
+    <img alt="Genesis Framework Foundations" src="./Joining Tables and Aliasing_files/cover-wordpress-genesis.png">
+  </div>
+  <p><strong>New Course</strong> • 15 days ago</p>
+  <h3>Genesis Framework Foundations</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-164113192" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/164113192?redirect_to=%2Flibrary%2Fjavascript-basics">
+  <div class="achievement-hero" style="background-color: #C25975">
+    <img alt="JavaScript Basics" src="./Joining Tables and Aliasing_files/ipad_default_2x_cover-js-foundations.png">
+  </div>
+  <p><strong>New Course</strong> • 15 days ago</p>
+  <h3>JavaScript Basics</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-163208322" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/163208322?redirect_to=%2Flibrary%2Fmodern-web-conference%2Fgetting-git">
+  <div class="achievement-hero" style="background-color: #b7c0c7">
+    <img alt="Modern Web Conference" src="./Joining Tables and Aliasing_files/cover-conference.png">
+  </div>
+  <p><strong>New Episode</strong> • 16 days ago</p>
+  <h3>Getting Git</h3>
+  <p class="notification-message">Modern Web Conference</p>
+</a>
+                    </li>
+                    <li id="notification-162310672" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/162310672?redirect_to=%2Flibrary%2Fthe-treehouse-show%2Fepisode-113-api-responses-font-compression-tab-styles">
+  <div class="achievement-hero" style="background-color: #b7c0c7">
+    <img alt="The Treehouse Show" src="./Joining Tables and Aliasing_files/cover-show-treehouse.png">
+  </div>
+  <p><strong>New Episode</strong> • 17 days ago</p>
+  <h3>Episode 113: API Responses, Font Compression, Tab Styles</h3>
+  <p class="notification-message">The Treehouse Show</p>
+</a>
+                    </li>
+                    <li id="notification-161416842" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/161416842?redirect_to=%2Flibrary%2Fusing-github-pages-to-host-free-websites">
+  <div class="achievement-hero" style="background-color: #637a91">
+    <img alt="Ipad default 2x cover workshops" src="./Joining Tables and Aliasing_files/ipad_default_2x_cover-workshops.png">
+  </div>
+  <p><strong>New Workshop</strong> • 17 days ago</p>
+  <h3>Using GitHub Pages to Host Free Websites</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-160524412" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/160524412?redirect_to=%2Flibrary%2Fjava-basics">
+  <div class="achievement-hero" style="background-color: #2C9676">
+    <img alt="Java Basics" src="./Joining Tables and Aliasing_files/cover-java-basics.png">
+  </div>
+  <p><strong>New Course</strong> • 17 days ago</p>
+  <h3>Java Basics</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                    <li id="notification-159628352" class=" notification">
+                      
+<a class="content-block" href="http://teamtreehouse.com/notifications/159628352?redirect_to=%2Flibrary%2Fwrite-better-python">
+  <div class="achievement-hero" style="background-color: #F092B0">
+    <img alt="Write Better Python" src="./Joining Tables and Aliasing_files/cover-python-bettercode.png">
+  </div>
+  <p><strong>New Course</strong> • 18 days ago</p>
+  <h3>Write Better Python</h3>
+  <p class="notification-message"></p>
+</a>
+                    </li>
+                </ul>
+                <a class="dropdown-secondary" href="http://teamtreehouse.com/notifications">See All</a>
+            
+          </div></li>
+          <li id="profile" data-layout-element="profile-menu">
+            <a href="http://teamtreehouse.com/venessiel">
+              <figure>
+                <div id="profile-pic">
+                  <canvas class="chart featurette " data-featurette="points-chart" width="46" height="46" data-points="{&quot;HTML&quot;:490,&quot;CSS&quot;:1239,&quot;Design&quot;:0,&quot;JavaScript&quot;:246,&quot;Ruby&quot;:0,&quot;PHP&quot;:0,&quot;WordPress&quot;:0,&quot;iOS&quot;:0,&quot;Android&quot;:0,&quot;Development Tools&quot;:117,&quot;Business&quot;:0,&quot;Python&quot;:0,&quot;Java&quot;:0}" data-points-total="2122" id="featurette-1" style="width: 46px; height: 46px;"></canvas>
+                  <img src="./Joining Tables and Aliasing_files/c2356ccf2f4eee7e97fb9abd0277700a">
+                </div>
+                <figcaption>
+                  <h4>Kamilla Khabibrakhmanova</h4>
+                    <em id="points-counter">2,122</em>
+                </figcaption>
+              </figure>
+            </a>
+              <div id="profile-dropdown" class="dropdown right">
+              <h4 class="dropdown-title">
+                <a href="http://teamtreehouse.com/venessiel">
+                  <strong>Kamilla Khabibrakhmanova</strong>
+                  <span>View Profile</span>
+                </a>
+              </h4>
+              <ul>
+                <li><a href="http://teamtreehouse.com/account">Account Settings</a></li>
+                  </ul>
+              <a class="dropdown-secondary" href="http://teamtreehouse.com/logout">Sign Out</a>
+              </div>
+          </li>
+      </ul>
+      <ul id="breadcrumb" class="with-sidebar-shadow" data-layout-element="breadcrumb" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <li id="back" class="  go-back">
+          <a href="http://teamtreehouse.com/library/database-foundations">
+            <svg class="logo-icon" preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 32">
+	<path d="M28.4,7.1c-0.4-0.2-1.3-0.6-2.3-1.2C25,5.3,23.3,6.3,22.2,8l-1.9,3.2c-0.7,1.4-0.6,2.9,0.3,4.2l0.1,0.1
+		c0.9,1.3,2.1,2.4,2.4,2.8c0.2,0.2,0.4,0.6,0.5,0.9c0.3,1.2-0.3,2.3-1.5,2.6c-1.1,0.3-2.3-0.4-2.7-1.5c-0.1-0.3-0.1-0.6-0.1-0.9
+		c0.1-0.5-0.1-1.3-0.8-1.9c-0.7-0.8-2.1,0.7-2.5,2.1v0.1c-0.4,1.5-0.7,2.7-0.6,2.8c0,0.1,0.1,0.2,0.1,0.2c0.6,1.2,0.2,2.6-1,3.2
+		s-2.7,0.2-3.3-1s-0.2-2.6,1-3.2c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.3-0.7,0.6-1.4c0.2-0.7,0.4-1.3,0.4-1.3c0-0.1,0-0.2,0.1-0.2l1.2-4.2
+		L13.5,17c-0.2-0.5-0.4-0.5-1-0.1c-0.3,0.2-0.9,0.7-1.1,0.9c-0.5,0.4-0.9,1.1-1.1,1.5c-0.1,0.3-0.3,0.5-0.5,0.7
+		c-0.9,0.8-2.3,0.6-3-0.3s-0.5-2.1,0.4-2.8c0.3-0.2,0.6-0.4,0.9-0.4c0.5-0.1,2.4-1.3,3.5-2c0.2-0.1,0.4-0.3,0.5-0.4L15,12l-2.6,1.4
+		c0,0-0.3,0-0.6,0c-0.8,0.1-1.8,0.2-2,0.5c-0.1,0.1-0.2,0.3-0.4,0.4c-0.8,0.4-2,0.2-2.7-0.6c-0.6-0.9-0.4-2,0.4-2.6
+		c0.5-0.3,0.9-0.4,1.3-0.4c0.7,0,2.5,0.4,4,0.1l0.4-0.1c1.5-0.3,3.3-1.5,4-2.9c0,0,0.7-1.3,1.6-2.7c0.9-1.5,0.8-3.1-0.1-3.7l-1.7-1
+		c-0.9-0.5-2.3-0.5-3.2,0L1.6,6.9C0.7,7.4,0,8.7,0,9.7v12.8c0,1,0.7,2.1,1.6,2.6l11.9,6.6c0.9,0.5,2.3,0.5,3.2,0L28.4,25
+		c0.9-0.5,1.6-1.6,1.6-2.6V9.7C30,8.7,29.3,7.6,28.4,7.1z"></path>
+</svg>
+
+            <svg version="1.1" class="arrow-icons" viewBox="0 0 18 16" preserveAspectRatio="xMinYMin meet">
+	<path class="right-arrow" d="M17.4,6.6l-6-6c-0.8-0.8-2-0.8-2.8,0c-0.8,0.8-0.8,2,0,2.8L11.2,6H2C0.9,6,0,6.9,0,8s0.9,2,2,2h9.2l-2.6,2.6
+		c-0.8,0.8-0.8,2,0,2.8C9,15.8,9.5,16,10,16s1-0.2,1.4-0.6l6-6C18.2,8.6,18.2,7.4,17.4,6.6z"></path>
+	<path class="left-arrow" d="M0.6,6.6l6-6c0.8-0.8,2-0.8,2.8,0c0.8,0.8,0.8,2,0,2.8L6.8,6H16c1.1,0,2,0.9,2,2s-0.9,2-2,2H6.8l2.6,2.6
+		c0.8,0.8,0.8,2,0,2.8C9,15.8,8.5,16,8,16s-1-0.2-1.4-0.6l-6-6C-0.2,8.6-0.2,7.4,0.6,6.6z"></path>
+</svg>
+
+            <svg class="loading-icon" preserveAspectRatio="xMinYMin meet" viewBox="0 0 18 18">
+	<path class="loading-circle" d="M9,4c2.76,0,5,2.24,5,5s-2.24,5-5,5s-5-2.24-5-5S6.24,4,9,4 M9,0C4.03,0,0,4.03,0,9s4.03,9,9,9s9-4.03,9-9S13.97,0,9,0L9,0z"></path>
+	<path class="loading-quarter-circle" d="M16,11c-1.1,0-2-0.9-2-2c0-2.76-2.24-5-5-5C7.9,4,7,3.1,7,2s0.9-2,2-2c4.96,0,9,4.04,9,9C18,10.1,17.1,11,16,11z"></path>
+</svg>
+          </a>
+        </li>
+        <li id="page-title" class="go-back">
+            <h3>              <a href="http://teamtreehouse.com/library/database-foundations" itemprop="url">
+                <span itemprop="title">Database Foundations</span>
+</a></h3>        </li>
+        
+
+        <li id="mobile-nav-toggle" class="unread">
+          <a href="http://teamtreehouse.com/library/joining-tables-and-aliasing-2#">
+            <span class="hamburger"></span>
+              <em class="notifications ">4</em>
+          </a>
+        </li>
+      </ul>
+      <nav data-layout-element="navigation">
+        <ul id="main-pages">
+          <li id="home" class="main-page ">
+            <a href="http://teamtreehouse.com/home">
+              <svg class="logo-icon" preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 32">
+	<path d="M28.4,7.1c-0.4-0.2-1.3-0.6-2.3-1.2C25,5.3,23.3,6.3,22.2,8l-1.9,3.2c-0.7,1.4-0.6,2.9,0.3,4.2l0.1,0.1
+		c0.9,1.3,2.1,2.4,2.4,2.8c0.2,0.2,0.4,0.6,0.5,0.9c0.3,1.2-0.3,2.3-1.5,2.6c-1.1,0.3-2.3-0.4-2.7-1.5c-0.1-0.3-0.1-0.6-0.1-0.9
+		c0.1-0.5-0.1-1.3-0.8-1.9c-0.7-0.8-2.1,0.7-2.5,2.1v0.1c-0.4,1.5-0.7,2.7-0.6,2.8c0,0.1,0.1,0.2,0.1,0.2c0.6,1.2,0.2,2.6-1,3.2
+		s-2.7,0.2-3.3-1s-0.2-2.6,1-3.2c0.1,0,0.1-0.1,0.2-0.1c0.1,0,0.3-0.7,0.6-1.4c0.2-0.7,0.4-1.3,0.4-1.3c0-0.1,0-0.2,0.1-0.2l1.2-4.2
+		L13.5,17c-0.2-0.5-0.4-0.5-1-0.1c-0.3,0.2-0.9,0.7-1.1,0.9c-0.5,0.4-0.9,1.1-1.1,1.5c-0.1,0.3-0.3,0.5-0.5,0.7
+		c-0.9,0.8-2.3,0.6-3-0.3s-0.5-2.1,0.4-2.8c0.3-0.2,0.6-0.4,0.9-0.4c0.5-0.1,2.4-1.3,3.5-2c0.2-0.1,0.4-0.3,0.5-0.4L15,12l-2.6,1.4
+		c0,0-0.3,0-0.6,0c-0.8,0.1-1.8,0.2-2,0.5c-0.1,0.1-0.2,0.3-0.4,0.4c-0.8,0.4-2,0.2-2.7-0.6c-0.6-0.9-0.4-2,0.4-2.6
+		c0.5-0.3,0.9-0.4,1.3-0.4c0.7,0,2.5,0.4,4,0.1l0.4-0.1c1.5-0.3,3.3-1.5,4-2.9c0,0,0.7-1.3,1.6-2.7c0.9-1.5,0.8-3.1-0.1-3.7l-1.7-1
+		c-0.9-0.5-2.3-0.5-3.2,0L1.6,6.9C0.7,7.4,0,8.7,0,9.7v12.8c0,1,0.7,2.1,1.6,2.6l11.9,6.6c0.9,0.5,2.3,0.5,3.2,0L28.4,25
+		c0.9-0.5,1.6-1.6,1.6-2.6V9.7C30,8.7,29.3,7.6,28.4,7.1z"></path>
+</svg>
+ <span>Home</span>
+            </a>
+          </li>
+            <li id="tracks" class="main-page ">
+              <a href="http://teamtreehouse.com/tracks">
+                <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 26">
+	<path d="M29,2l-7-2l-7,2L8,0L1,2c0,0-1,0.4-1,1v22c0,0.6,0.4,1,1,1l7-2l7,2l7-2l7,2c0.6,0,1-0.4,1-1V3C30,2.4,29,2,29,2z M28,24
+		l-6-2l-7,2l-7-2l-6,2V4l6-2l7,2l7-2l6,2V24z M15,5.1l-7-2L3,4.9v17.7L8,21l7,1.9l7-1.9l5,1.5V4.8L22,3L15,5.1z M15,7
+		c0.3,0,0.5,0.2,0.5,0.5S15.3,8,15,8s-0.5-0.2-0.5-0.5S14.7,7,15,7z M15,10c0.3,0,0.5,0.2,0.5,0.5S15.3,11,15,11s-0.5-0.2-0.5-0.5
+		S14.7,10,15,10z M15,13c0.3,0,0.5,0.2,0.5,0.5S15.3,14,15,14s-0.5-0.2-0.5-0.5S14.7,13,15,13z M8,5c0.3,0,0.5,0.2,0.5,0.5
+		C8.5,5.7,8.3,6,8,6S7.5,5.8,7.5,5.5S7.7,5,8,5z M8,8c0.3,0,0.5,0.2,0.5,0.5C8.5,8.7,8.3,9,8,9S7.5,8.8,7.5,8.5S7.7,8,8,8z M8,11
+		c0.3,0,0.5,0.2,0.5,0.5C8.5,11.7,8.3,12,8,12s-0.5-0.2-0.5-0.5S7.7,11,8,11z M8,19c-0.3,0-0.5-0.2-0.5-0.5S7.7,18,8,18
+		s0.5,0.2,0.5,0.5C8.5,18.7,8.3,19,8,19z M15,21c-0.3,0-0.5-0.2-0.5-0.5S14.7,20,15,20s0.5,0.2,0.5,0.5S15.3,21,15,21z M22,19
+		c-0.3,0-0.5-0.2-0.5-0.5S21.7,18,22,18s0.5,0.2,0.5,0.5C22.5,18.7,22.3,19,22,19z M22,16c-0.3,0-0.5-0.2-0.5-0.5S21.7,15,22,15
+		s0.5,0.2,0.5,0.5S22.3,16,22,16z M24.5,10c0.8,0,1.5,0.7,1.5,1.5S25.3,13,24.5,13c-0.5,0-1-0.3-1.3-0.7l-2.9,1.1l-1.7,3.2
+		c0.2,0.3,0.3,0.6,0.3,0.9c0,0.8-0.7,1.5-1.5,1.5c-0.6,0-1.2-0.4-1.4-1l-3.3-0.6L8,15.1l-1,0.5C7,16.4,6.3,17,5.5,17
+		C4.7,17,4,16.3,4,15.5S4.7,14,5.5,14c0.5,0,0.9,0.2,1.2,0.6L8,13.9l5.2,2.6l2.9,0.5c0.2-0.6,0.8-1,1.4-1c0.1,0,0.2,0,0.3,0l1.8-3.4
+		l3.4-1.3C23.1,10.6,23.7,10,24.5,10z M21.5,8.5C21.5,8.2,21.7,8,22,8s0.5,0.2,0.5,0.5S22.3,9,22,9S21.5,8.7,21.5,8.5z M22.5,5.5
+		C22.5,5.8,22.3,6,22,6s-0.5-0.2-0.5-0.5S21.7,5,22,5S22.5,5.2,22.5,5.5z"></path>
+</svg>
+ <span>Tracks</span>
+              </a>
+            </li>
+            <li id="library" class="main-page ">
+              <a href="http://teamtreehouse.com/library">
+                <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 24">
+	<path d="M28,24H15.3c0.5-0.9,1.9-2,5.4-2c0.1,0,0.2,0,0.3,0l0,0h6c0.6,0,1-0.4,1-1V3h-1v18h-6h-2l0,0c-0.1,0-0.1,0-0.2,0
+		C15,21,15,23,15,23s0-2-3.8-2c-0.1,0-0.1,0-0.2,0l0,0H9H8H3V3H2v18c0,0.6,0.4,1,1,1h6l0,0c0.1,0,0.2,0,0.3,0c3.5,0,4.9,1.1,5.4,2H2
+		c-1.1,0-2-0.9-2-2V2c0-0.6,0.4-1,1-1h2V0h8l0,0c0.1,0,0.1,0,0.2,0C15,0,15,2.3,15,2.3S15,0,18.8,0c0.1,0,0.1,0,0.2,0l0,0h8v1h2
+		c0.6,0,1,0.4,1,1v20C30,23.1,29.1,24,28,24z M5.5,17H11h1.5c0.3,0,0.5-0.2,0.5-0.5S12.8,16,12.5,16h-7C5.2,16,5,16.2,5,16.5
+		S5.2,17,5.5,17z M5.5,14h7c0.3,0,0.5-0.2,0.5-0.5S12.8,13,12.5,13h-7C5.2,13,5,13.2,5,13.5S5.2,14,5.5,14z M9,3C6.8,3,5.1,4.8,5,7
+		c0,2.2,1.8,4,4,4s4-1.7,4-4C13,4.8,11.2,3,9,3z M24.5,4h-7C17.2,4,17,4.2,17,4.5S17.2,5,17.5,5h7C24.8,5,25,4.8,25,4.5
+		S24.8,4,24.5,4z M24.5,7h-7C17.2,7,17,7.2,17,7.5S17.2,8,17.5,8h7C24.8,8,25,7.8,25,7.5S24.8,7,24.5,7z M24.5,10h-7
+		c-0.3,0-0.5,0.2-0.5,0.5s0.2,0.5,0.5,0.5h7c0.3,0,0.5-0.2,0.5-0.5S24.8,10,24.5,10z M25,14c0-0.6-0.4-1-1-1h-6c-0.6,0-1,0.4-1,1v2
+		c0,0.6,0.4,1,1,1h1h5c0.6,0,1-0.4,1-1V14z M9,9C7.9,9,7,8.1,7,7s0.9-2,2-2s2,0.9,2,2S10.1,9,9,9z"></path>
+</svg>
+ <span>Library</span>
+              </a>
+            </li>
+            <li id="forum" class="main-page ">
+              <a href="http://teamtreehouse.com/forum">
+                <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 28">
+	<path d="M29,9H10c-0.6,0-1,0.4-1,1v13c0,0.6,0.4,1,1,1h10l6,4v-4h3c0.6,0,1-0.4,1-1V10
+		C30,9.4,29.6,9,29,9z M21,7V1c0-0.6-0.4-1-1-1H1C0.4,0,0,0.4,0,1v14c0,0.6,0.4,1,1,1h3v4l3-2v-8c0-1.7,1.3-3,3-3H21z"></path>
+</svg>
+ <span>Forum</span>
+              </a>
+            </li>
+            <li id="workspaces" class="main-page ">
+              <a href="http://teamtreehouse.com/workspaces">
+                <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 28">
+	<path d="M10,5c0.6,0,1-0.4,1-1s-0.4-1-1-1S9,3.4,9,4S9.4,5,10,5z M7,5c0.6,0,1-0.4,1-1S7.6,3,7,3
+		S6,3.4,6,4S6.4,5,7,5z M29,0H1C0.4,0,0,0.4,0,1v26c0,0.6,0.4,1,1,1h28c0.6,0,1-0.4,1-1V1C30,0.4,29.6,0,29,0z M12.5,19.5
+		c0.6,0.5,0.7,1.4,0.1,2c-0.3,0.3-0.7,0.5-1.1,0.5c-0.3,0-0.7-0.1-0.9-0.4L6.5,18C6.2,17.8,6,17.4,6,17s0.2-0.8,0.5-1.1l4.1-3.6
+		c0.6-0.5,1.5-0.5,2,0.1s0.5,1.5-0.1,2L9.6,17L12.5,19.5z M23.5,18.1l-4.1,3.6c-0.3,0.2-0.6,0.4-0.9,0.4c-0.4,0-0.8-0.2-1.1-0.5
+		c-0.5-0.6-0.5-1.5,0.1-2l2.9-2.5l-2.9-2.5c-0.6-0.5-0.7-1.4-0.1-2c0.5-0.6,1.4-0.7,2-0.1l4.1,3.6c0.3,0.3,0.5,0.7,0.5,1.1
+		S23.8,17.8,23.5,18.1z M28,6H2V2h26V6z M4,5c0.6,0,1-0.4,1-1S4.6,3,4,3S3,3.4,3,4S3.4,5,4,5z"></path>
+</svg>
+ <span>Workspaces</span>
+              </a>
+            </li>
+          <li id="desktop-nav-toggle" class="">
+            <a href="http://teamtreehouse.com/library/joining-tables-and-aliasing-2#">
+              <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 23 29">
+	<path class="icon-shelf" d="M20.5,0H7.53c-1.38,0-2.5,1.12-2.5,2.5S6.15,5,7.53,5H18v19H7.53c-1.38,0-2.5,1.12-2.5,2.5S6.15,29,7.53,29H20.5
+		c1.38,0,2.5-1.12,2.5-2.5v-24C23,1.12,21.88,0,20.5,0z"></path>
+	<path class="icon-right-arrow" d="M15.95,14.95C15.98,14.82,16,14.67,16,14.5c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0
+		c0-0.17-0.02-0.31-0.05-0.45c-0.01-0.05-0.02-0.09-0.03-0.14c-0.01-0.02-0.01-0.05-0.02-0.08c-0.16-0.59-0.53-1.1-1.04-1.43
+		l-2.95-3.59c-0.7-0.9-1.9-1-3.09-0.6c-0.9,0.7-1.1,1.99-0.4,2.79L9.01,12H2.5C1.12,12,0,13.12,0,14.5S1.12,17,2.5,17h6.51
+		l-0.59,0.79c-0.7,0.8-0.5,2.19,0.4,2.79c1,0.7,2.39,0.5,3.09-0.4l2.96-3.59c0.5-0.33,0.87-0.83,1.03-1.42
+		c0.01-0.03,0.02-0.06,0.03-0.09C15.94,15.04,15.95,15,15.95,14.95z"></path>
+	<path class="icon-left-arrow" d="M0.05,14.95C0.02,14.82,0,14.67,0,14.5c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0
+		c0-0.17,0.02-0.31,0.05-0.45c0.01-0.05,0.02-0.09,0.03-0.14c0.01-0.02,0.01-0.05,0.02-0.08c0.16-0.59,0.53-1.1,1.04-1.43l2.95-3.59
+		c0.7-0.9,1.9-1,3.09-0.6c0.9,0.7,1.1,1.99,0.4,2.79L6.99,12h6.51c1.38,0,2.5,1.12,2.5,2.5S14.88,17,13.5,17H6.99l0.59,0.79
+		c0.7,0.8,0.5,2.19-0.4,2.79c-1,0.7-2.39,0.5-3.09-0.4l-2.96-3.59c-0.5-0.33-0.87-0.83-1.03-1.42c-0.01-0.03-0.02-0.06-0.03-0.09
+		C0.06,15.04,0.05,15,0.05,14.95z"></path>
+</svg>
+ <span>Expand</span>
+            </a>
+          </li>
+          <li id="support" class="secondary-page">
+            <a href="http://teamtreehouse.com/support">
+              <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 30 30">
+	<path d="M28,15c0-0.4,0-0.7-0.1-1.1c0.8-1.6,2.7-6.4-1.3-10.5c-1.7-1.7-3.7-2.5-5.9-2.5c-2,0-3.6,0.7-4.5,1.1
+		c-0.4,0-0.8-0.1-1.2-0.1s-0.8,0-1.2,0.1c-0.9-0.4-2.5-1.1-4.5-1.1c-2.2,0-4.2,0.9-5.9,2.5c-4.1,4.1-2.2,8.8-1.3,10.5
+		C2.1,14.3,2,14.6,2,15s0,0.7,0.1,1.1c-0.8,1.6-2.7,6.4,1.3,10.5c1.7,1.7,3.7,2.5,5.9,2.5c2,0,3.7-0.7,4.6-1.2c0.4,0,0.8,0.1,1.1,0.1
+		c0.4,0,0.8,0,1.1-0.1c0.9,0.4,2.5,1.2,4.6,1.2c2.2,0,4.2-0.9,5.9-2.5c4.1-4.1,2.2-8.8,1.3-10.5C28,15.7,28,15.4,28,15z M20.7,2.5
+		c1.8,0,3.4,0.7,4.8,2.1c2.3,2.3,2.3,4.8,1.9,6.6C26.2,7.2,23,4,19,2.7C19.6,2.5,20.1,2.5,20.7,2.5z M15,20c-2.8,0-5-2.2-5-5
+		s2.2-5,5-5s5,2.2,5,5S17.8,20,15,20z M10.1,20L10.1,20L10.1,20l-2.9,2.8c-2-2-3.2-4.7-3.2-7.7s1.2-5.7,3.2-7.7L10,10l0,0v0.1
+		c-1.3,1.3-2.1,3-2.1,5C8,17,8.8,18.7,10.1,20z M22,15c0-2-0.8-3.7-2.1-5V9.9c0,0,0,0,0.1,0l2.9-2.7c2,2,3.2,4.7,3.2,7.7
+		s-1.2,5.7-3.2,7.7L20,20l0,0v-0.1C21.2,18.7,22,17,22,15z M4.5,4.5c1.4-1.4,3-2.1,4.8-2.1c0.6,0,1.1,0.1,1.7,0.2
+		c-4,1.3-7.1,4.5-8.4,8.5C2.1,9.3,2.2,6.8,4.5,4.5z M9.3,27.6c-1.8,0-3.4-0.7-4.8-2.1c-2.3-2.3-2.3-4.8-1.9-6.6
+		c1.3,4,4.4,7.2,8.5,8.5C10.5,27.5,9.9,27.6,9.3,27.6z M25.5,25.5c-1.4,1.4-3,2.1-4.8,2.1c-0.6,0-1.2-0.1-1.7-0.2
+		c4-1.3,7.2-4.5,8.5-8.5C27.9,20.7,27.9,23.2,25.5,25.5z"></path>
+</svg>
+ <span>Support</span>
+            </a>
+          </li>
+            <li id="account" class="secondary-page">
+              <a href="http://teamtreehouse.com/account"><span>Account</span></a>
+            </li>
+            <li id="sign-out" class="secondary-page">
+              <a href="http://teamtreehouse.com/logout"><span>Sign Out</span></a>
+            </li>
+        </ul>
+      </nav>
+    </header>
+    <div id="container" class="with-sidebar" data-layout-element="container" style="min-height: 665px;">
+        <aside data-layout-element="sidebar" style="height: 665px; top: 0px;">
+            <div class="contained secondary module">
+  <div class="steps-nav">
+    <div class="parent-meta" itemprop="child" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" id="page-title">
+        <a href="http://teamtreehouse.com/library/database-foundations#joining-relational-data-between-tables-in-sql" itemprop="url">
+          <strong>Stage 6</strong>
+          <h2 itemprop="title">Joining Relational Data Between Tables in SQL </h2>
+</a>    </div>
+
+    <ul>
+      <li class="grid-50 tablet-grid-50 mobile-grid-50 grid-parent">
+          <a class="steps-nav-prev" href="http://teamtreehouse.com/library/database-foundations/joining-relational-data-between-tables-in-sql/-joining-tables-and-aliasing">
+            <svg class="left-arrow" preserveAspectRatio="xMinYMin meet" viewBox="0 0 81 72" enable-background="new 0 0 81 72" xml:space="preserve">
+<path d="M72,45H31.1l11.2,11.2c3.6,3.6,3.6,9.5,0,13c-3.6,3.6-9.5,3.6-13.1,0L2.7,43.2c-1.4-1.8-2.2-3.6-2.2-5.4v-0.5
+	C0,36.9,0,36.5,0,36l0,0l0,0c0-0.5,0-0.9,0-1.8v-0.5c0.5-1.8,0.9-3.6,2.2-4.9L28.8,2.2c3.6-3.6,9.4-3.6,13.1,0
+	c3.6,3.6,3.6,9.4,0,13.1L31.1,27H72c5,0,9,4.1,9,9S77,45,72,45z"></path>
+</svg>
+
+</a>      </li>
+      <li class="grid-50 tablet-grid-50 mobile-grid-50 grid-parent">
+          <a class="steps-nav-next disabled"><svg class="right-arrow" preserveAspectRatio="xMinYMin meet" viewBox="0 0 81 72" enable-background="new 0 0 81 72" xml:space="preserve">
+<path d="M9,26.5h41L38.7,15.3c-3.6-3.6-3.6-9.5,0-13c3.6-3.6,9.5-3.6,13.1,0l26.5,26.1c1.3,1.8,2.2,3.6,2.2,5.4v0.5
+	c0.4,0.4,0.4,0.9,0.4,1.3l0,0l0,0c0,0.5,0,0.9,0,1.8v0.5c-0.4,1.8-0.9,3.6-2.2,5L52.2,69.3c-3.6,3.6-9.5,3.6-13.1,0
+	c-3.6-3.6-3.6-9.5,0-13L50,44.5H9c-5,0-9-4-9-9C0,30.6,4,26.5,9,26.5z"></path>
+</svg>
+</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+        </aside>
+      <div id="content">
+        
+        
+<div id="command-challenge" data-featurette="command-challenge" data-challenge="{&quot;tasks&quot;:[{&quot;body&quot;:&quot;\u003cp\u003eWe have a &#39;\u003ccode\u003emovies\u003c/code\u003e&#39; table with a &#39;\u003ccode\u003etitle\u003c/code\u003e&#39; and &#39;\u003ccode\u003egenre_id\u003c/code\u003e&#39; column and a &#39;\u003ccode\u003egenres\u003c/code\u003e&#39; table has an &#39;\u003ccode\u003eid\u003c/code\u003e&#39; and &#39;\u003ccode\u003ename\u003c/code\u003e&#39; column. Use an INNER JOIN to join the &#39;\u003ccode\u003emovies\u003c/code\u003e&#39; and &#39;\u003ccode\u003egenres\u003c/code\u003e&#39; tables together only selecting the movie &#39;\u003ccode\u003etitle\u003c/code\u003e&#39; first and the genre &#39;\u003ccode\u003ename\u003c/code\u003e&#39; second.\u003c/p\u003e&quot;,&quot;seed_data&quot;:&quot;CREATE TABLE movies (id INTEGER AUTO_INCREMENT PRIMARY KEY, title VARCHAR(100), year_released YEAR);\nCREATE TABLE genres (id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL UNIQUE KEY);\nALTER TABLE movies ADD COLUMN genre_id INTEGER NULL, ADD CONSTRAINT FOREIGN KEY (genre_id) REFERENCES genres(id);\n\nINSERT INTO genres (name) VALUES (\&quot;Sci Fi\&quot;);\nINSERT INTO genres (name) VALUES (\&quot;Action\&quot;);\nINSERT INTO genres (name) VALUES (\&quot;Musical\&quot;);\n\n\nINSERT INTO movies (title, year_released, genre_id) VALUES ( \&quot;Alien\&quot;, 1979,1);\nINSERT INTO movies (title, year_released, genre_id) VALUES (\&quot;Aliens\&quot;, 1986,1);\nINSERT INTO movies (title, year_released, genre_id) VALUES (\&quot;Moulin Rouge\&quot;, 2001,3);\nINSERT INTO movies (title) VALUES (\&quot;Guys and Dolls\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Mama Mia\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Starman\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Tron\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Die Hard\&quot;);\n\n&quot;},{&quot;body&quot;:&quot;\u003cp\u003eLike before, bring back the movie &#39;\u003ccode\u003etitle\u003c/code\u003e&#39; and genre &#39;\u003ccode\u003ename\u003c/code\u003e&#39; but use the correct OUTER JOIN to bring back all movies, regardless of whether the &#39;\u003ccode\u003egenre_id\u003c/code\u003e&#39; is set or not.\u003c/p\u003e&quot;,&quot;seed_data&quot;:&quot;CREATE TABLE movies (id INTEGER AUTO_INCREMENT PRIMARY KEY, title VARCHAR(100), year_released YEAR);\nCREATE TABLE genres (id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY, name VARCHAR(30) NOT NULL UNIQUE KEY);\nALTER TABLE movies ADD COLUMN genre_id INTEGER NULL, ADD CONSTRAINT FOREIGN KEY (genre_id) REFERENCES genres(id);\n\nINSERT INTO genres (name) VALUES (\&quot;Sci Fi\&quot;);\nINSERT INTO genres (name) VALUES (\&quot;Action\&quot;);\nINSERT INTO genres (name) VALUES (\&quot;Musical\&quot;);\n\n\nINSERT INTO movies (title, year_released, genre_id) VALUES ( \&quot;Alien\&quot;, 1979,1);\nINSERT INTO movies (title, year_released, genre_id) VALUES (\&quot;Aliens\&quot;, 1986,1);\nINSERT INTO movies (title, year_released, genre_id) VALUES (\&quot;Moulin Rouge\&quot;, 2001,3);\nINSERT INTO movies (title) VALUES (\&quot;Guys and Dolls\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Mama Mia\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Starman\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Tron\&quot;);\nINSERT INTO movies (title) VALUES (\&quot;Die Hard\&quot;);\n\n&quot;}],&quot;files&quot;:null,&quot;previews&quot;:null,&quot;no_preview&quot;:null,&quot;challenge_id&quot;:&quot;c856ab103e7231808052c336fc9775c3eb331790eeff01ad1a9c19246d77ce1a&quot;,&quot;timeout&quot;:15,&quot;uuid&quot;:&quot;e6fde27f-9789-4f62-97cc-185590e3422f&quot;}" data-completed-path="/library/completed/joining-tables-and-aliasing-2" data-submit-path="/library/code_challenge_submit/250" data-badge-url="https://wac.A8B5.edgecastcdn.net/80A8B5/achievement-images/badges_DD_Database_Stage5.png" data-timeout-path="/library/code_challenge_timeout/250">
+
+
+<div class="mixed-box task_view">
+  <div id="instructions" class="box-header">
+    <h2 id="task-count">Challenge Task 1 of 2</h2>
+    <h1 id="task" class="markdown-zone"><p>We have a '<code>movies</code>' table with a '<code>title</code>' and '<code>genre_id</code>' column and a '<code>genres</code>' table has an '<code>id</code>' and '<code>name</code>' column. Use an INNER JOIN to join the '<code>movies</code>' and '<code>genres</code>' tables together only selecting the movie '<code>title</code>' first and the genre '<code>name</code>' second.</p></h1>
+    <p id="task-notes">Type in your command below, then press Enter.</p>
+  </div>
+  <div id="feedback"></div>
+  <div class="box-content">
+    <div class="workspace">
+      <div class="cc-workspace">
+        <div class="cc-editor-container">
+          <div class="terminal"><div class="CodeMirror cm-s-default CodeMirror-wrap  CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 518px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-hscrollbar" style="left: 0px; min-height: 18px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar" style="min-width: 18px;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 24px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 518px; top: 0px; height: 16px;">&nbsp;</div></div><div class="CodeMirror-code"><pre><span style="padding-right: 0.1px;">&gt; SELECT movies.title genre.name INNER JOIN genres ON movies.genre_id = genres.id;</span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 24px;"></div><div class="CodeMirror-gutters" style="display: none; height: 24px;"></div></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box-footer"></div>
+</div>
+</div>
+
+
+
+      </div>
+      <footer>
+          <div id="footer-bonus">
+            <div>
+              <h5>Career Resources</h5>
+              <a class="svg" href="http://teamtreehouse.com/career-resources" title="Career Resources"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 70 50">
+	<path d="M25,7c0-1.1,0.9-2,2-2h15c1.1,0,2,0.9,2,2v2h5V4c0-2.21-1.79-4-4-4H24
+		c-2.21,0-4,1.79-4,4v5h5V7z M66,10H4c-2.21,0-4,1.79-4,4v32c0,2.21,1.79,4,4,4h62c2.21,0,4-1.79,4-4V14C70,11.79,68.21,10,66,10z
+		M62,7c0-0.55-0.45-1-1-1h-5c-0.55,0-1,0.45-1,1v2h7V7z M15,7c0-0.55-0.45-1-1-1H9C8.45,6,8,6.45,8,7v2h7V7z"></path>
+</svg>
+</a>
+              <p>Get <a href="http://teamtreehouse.com/career-resources">tips and resources</a> on how to prepare for and find a new job in the industry.</p>
+            </div>
+            <div>
+              <h5>Treehouse For iPad</h5>
+              <a class="svg" href="http://teamtreehouse.com/ipad" title="Get the iPad App"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 70 50">
+	<path class="icon-ipad" d="M66,0H4C1.79,0,0,1.79,0,4v42c0,2.21,1.79,4,4,4h62c2.21,0,4-1.79,4-4V4C70,1.79,68.21,0,66,0z M4,26
+		c-0.55,0-1-0.45-1-1s0.45-1,1-1s1,0.45,1,1S4.55,26,4,26z M62,45H8V5h54V45z M66,27c-1.1,0-2-0.9-2-2s0.9-2,2-2s2,0.9,2,2
+		S67.1,27,66,27z"></path>
+	<path class="icon-logo" d="M44.05,16.78c-0.88-0.47-2.23,0.31-3.11,1.73l-1.51,2.6c-0.56,1.1-0.48,2.36,0.24,3.38l0.08,0.08
+		c0.72,1.02,1.67,1.97,1.91,2.28c0.16,0.16,0.32,0.47,0.4,0.71c0.24,0.94-0.24,1.89-1.2,2.12c-0.88,0.24-1.83-0.31-2.15-1.18
+		c-0.08-0.24-0.08-0.47-0.08-0.71c0.08-0.39-0.08-1.02-0.64-1.57c-0.56-0.63-1.67,0.55-1.99,1.73v0.08c-0.32,1.18-0.56,2.2-0.48,2.28
+		c0,0.08,0.08,0.16,0.08,0.16c0.48,0.94,0.16,2.12-0.8,2.6c-0.96,0.47-2.15,0.16-2.63-0.79c-0.48-0.94-0.16-2.12,0.8-2.6
+		c0.08,0,0.08-0.08,0.16-0.08c0.08,0,0.24-0.55,0.48-1.1c0.16-0.55,0.32-1.02,0.32-1.02c0-0.08,0-0.16,0.08-0.16l0.96-3.38
+		l-1.04,2.12c-0.16-0.39-0.32-0.39-0.8-0.08c-0.24,0.16-0.72,0.55-0.88,0.71c-0.4,0.31-0.72,0.87-0.88,1.18
+		c-0.08,0.24-0.24,0.39-0.4,0.55c-0.72,0.63-1.83,0.47-2.39-0.24c-0.56-0.71-0.48-1.81,0.24-2.36c0.24-0.16,0.48-0.31,0.72-0.31
+		c0.4-0.08,1.91-1.02,2.79-1.65c0.16-0.08,0.32-0.24,0.4-0.31l2.31-1.81l-2.07,1.1c0,0-0.24,0-0.48,0c-0.72,0.08-1.51,0.16-1.67,0.39
+		c-0.08,0.08-0.16,0.24-0.32,0.31c-0.64,0.31-1.59,0.16-2.15-0.47c-0.48-0.71-0.32-1.65,0.32-2.12c0.4-0.24,0.72-0.31,1.04-0.31
+		c0.56,0,1.99,0.31,3.19,0.08l0.32-0.08c1.2-0.24,2.63-1.26,3.19-2.36c0,0,0.56-1.02,1.28-2.2c0.72-1.26,0.64-2.52-0.08-2.99
+		l-1.36-0.79c-0.72-0.39-1.83-0.39-2.55,0l-9.41,5.35c-0.72,0.39-1.28,1.42-1.28,2.2v10.39c0,0.79,0.56,1.73,1.28,2.12l9.49,5.35
+		c0.72,0.39,1.83,0.39,2.55,0l9.41-5.35c0.72-0.39,1.28-1.34,1.28-2.12V19.84c0-0.79-0.56-1.73-1.28-2.12
+		C45.56,17.64,44.85,17.25,44.05,16.78z"></path>
+</svg>
+</a>
+              <p>Learn anytime and anywhere with <a href="http://teamtreehouse.com/ipad">Treehouse for iPad</a>. Download it for free today in the App store.</p>
+            </div>
+            <div>
+              <h5>Student Perks</h5>
+              <a class="svg" href="http://teamtreehouse.com/perks" title="See the student perks."><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 70 50">
+	<path d="M66,0H4C1.79,0,0,1.79,0,4v42c0,2.21,1.79,4,4,4h62c2.21,0,4-1.79,4-4V4C70,1.79,68.21,0,66,0z M56.79,9.05V8.21
+		c0-0.67,0.54-1.22,1.19-1.22c0.65,0,1.19,0.55,1.19,1.22v0.86c1.55,0.3,2.4,1.1,2.51,1.21c0.46,0.48,0.46,1.25,0,1.73
+		c-0.46,0.47-1.2,0.48-1.67,0.01c-0.05-0.04-0.72-0.63-2.03-0.63c-2.16,0-2.62,1.37-2.62,1.71c0,0.84,0,1.98,2.91,2.72
+		c4.72,1.21,4.72,4.03,4.72,5.09c0,1.51-1.19,3.56-3.81,4.04v0.84c0,0.67-0.54,1.22-1.19,1.22c-0.66,0-1.19-0.55-1.19-1.22v-0.84
+		c-2.65-0.48-3.63-2.43-3.68-2.52c-0.3-0.6-0.05-1.34,0.54-1.64c0.59-0.3,1.3-0.05,1.6,0.55c0.02,0.03,0.71,1.28,2.75,1.28
+		c2.15,0,2.61-1.37,2.61-1.71c0-0.83,0-1.98-2.9-2.72c-4.71-1.21-4.71-4.03-4.71-5.09C52.98,11.58,54.18,9.53,56.79,9.05z M35,5.99
+		c6.08,0,11,4.93,11,11.01c0,2.9-1.13,5.54-2.96,7.5c-0.51-0.88-1.38-2.06-2.8-3.09c1.09-1.47,1.64-3.56,1.64-6.25
+		c0-3.79-3.08-6.88-6.87-6.88s-6.87,3.09-6.87,6.88c0,2.06,0.33,3.77,0.98,5.13c-1.45,0.78-2.48,1.88-3.2,2.89
+		C24.7,21.42,24,19.29,24,17C24,10.92,28.92,5.99,35,5.99z M32.18,20.03c-0.87-0.97-1.31-2.61-1.31-4.86
+		c0-2.28,1.85-4.13,4.12-4.13c2.27,0,4.13,1.85,4.13,4.13c0,2.72-0.64,4.53-1.9,5.37c-0.41,0.28-0.64,0.75-0.61,1.24
+		c0.03,0.49,0.34,0.93,0.78,1.14c2.18,1.03,3.15,2.68,3.48,3.37c-1.7,1.09-3.72,1.72-5.89,1.72c-2.76,0-5.27-1.03-7.21-2.7
+		c0.66-1.08,1.84-2.51,3.74-3.04c0.45-0.13,0.81-0.49,0.95-0.94C32.61,20.87,32.5,20.38,32.18,20.03z M10.81,9.05V8.21
+		c0-0.67,0.53-1.22,1.19-1.22c0.66,0,1.19,0.55,1.19,1.22v0.86c1.55,0.3,2.4,1.1,2.51,1.21c0.46,0.48,0.46,1.25,0,1.73
+		c-0.46,0.47-1.2,0.48-1.67,0.01c-0.05-0.04-0.72-0.63-2.03-0.63c-2.15,0-2.62,1.37-2.62,1.71c0,0.84,0,1.98,2.91,2.72
+		C17,17.02,17,19.84,17,20.91c0,1.51-1.2,3.56-3.81,4.04v0.84c0,0.67-0.54,1.22-1.19,1.22c-0.66,0-1.19-0.54-1.19-1.22v-0.84
+		c-2.65-0.48-3.64-2.43-3.68-2.52c-0.3-0.6-0.05-1.34,0.54-1.64c0.58-0.3,1.3-0.05,1.6,0.55c0.02,0.03,0.71,1.28,2.75,1.28
+		c2.15,0,2.62-1.37,2.62-1.71c0-0.83,0-1.98-2.9-2.72C7,16.98,7,14.16,7,13.09C7,11.58,8.19,9.53,10.81,9.05z M66,44
+		c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2v-2h62V44z M66,36c0,1.1-0.9,2-2,2H6c-1.1,0-2-0.9-2-2v-2h62V36z"></path>
+</svg>
+</a>
+              <p>A collection of <a href="http://teamtreehouse.com/perks">special discounts</a> and exclusive offers available for Treehouse students.</p>
+            </div>
+          </div>
+        <ul id="footer-extras">
+            <li class="social-icon"><a href="http://twitter.com/treehouse" target="_blank" title="Twitter"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M19,8.3c-0.5,0.2-1,0.4-1.5,0.4c0.6-0.3,1-0.9,1.2-1.5c-0.5,0.3-1.1,0.5-1.7,0.7C16.5,7.3,15.8,7,15,7
+		c-1.5,0-2.7,1.2-2.7,2.8c0,0.2,0,0.4,0.1,0.6c-2.2-0.1-4.2-1.2-5.5-2.9C6.7,7.9,6.5,8.4,6.5,8.9c0,1,0.4,1.8,1.2,2.3
+		c-0.4,0-1.2-0.1-1.2-0.3c0,0,0,0,0,0c0,1.3,0.9,2.5,2.2,2.7c-0.2,0.1-0.4,0.1-0.7,0.1c-0.2,0-0.3,0-0.5-0.1c0.3,1.1,1.3,1.9,2.5,1.9
+		c-0.9,0.7-2.1,1.2-3.3,1.2c-0.2,0-0.4,0-0.6,0c1.2,0.8,2.6,1.2,4.1,1.2c4.9,0,7.6-4.2,7.6-7.9c0-0.1,0-0.2,0-0.4
+		C18.2,9.4,18.6,8.9,19,8.3z"></path>
+</svg>
+</a></li>
+            <li class="social-icon"><a href="http://youtube.com/user/gotreehouse" target="_blank" title="Youtube"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M19.9,15.3c-0.1,1.2-1.2,2.3-2.4,2.4C15.6,17.9,13.8,18,12,18s-3.6-0.1-5.5-0.2c-1.2-0.1-2.3-1.2-2.4-2.4
+		C4,13.1,4,10.9,4.1,8.7c0.1-1.2,1.2-2.3,2.4-2.4C8.4,6.1,10.2,6,12,6s3.6,0.1,5.5,0.2c1.2,0.1,2.3,1.2,2.4,2.4
+		C20,10.9,20,13.1,19.9,15.3z M14.7,11.7L9.9,9.1C9.7,9,9.5,9,9.3,9C9.1,9.1,9,9.3,9,9.4v5.2c0,0.2,0.1,0.3,0.3,0.4
+		c0.1,0,0.2,0,0.3,0c0.1,0,0.2,0,0.3-0.1l4.8-2.6c0.2-0.1,0.2-0.2,0.2-0.3C15,11.9,14.9,11.7,14.7,11.7z"></path>
+</svg>
+</a></li>
+            <li class="social-icon"><a href="http://facebook.com/teamtreehouse" target="_blank" title="Facebook"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M7,12h2v8h3v-8h3l0.7-3H12c0,0-0.3-1.1,0.2-1.5c0.3-0.2,0.7-0.4,1.3-0.4c0.6,0,1.1,0.3,1.7,0.6l0.9-2.9
+		c-1.1-0.3-2-0.6-3.2-0.6c-1.1,0-1.8,0.2-2.5,0.5C9.7,4.9,9.4,5.5,9.1,5.9C8.9,6.4,8.7,6.8,8.7,7.8V9H7L7,12z"></path>
+</svg>
+</a></li>
+            <li class="social-icon"><a href="http://plus.google.com/110278003536476194286/posts" target="_blank" title="Google Plus"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M17.9,7.9v1.8h-0.9V7.9h-1.8V7.1h1.8V5.3h0.9v1.8h1.8v0.9H17.9z M14.1,16.4
+		c0,3.8-4.9,3.6-4.9,3.6s-4.2,0.1-4.2-2.9s4.8-2.9,5.1-2.9c-0.1-0.7-0.5-0.6-0.5-0.9v-0.8c0,0-3.6,0.4-3.6-3S9.9,6,9.9,6h4.1
+		c0,0.6-1.9,0.4-1.9,0.7c1.1,0.5,1.2,1.2,1.2,2.5c0,2.1-2.1,2.4-2.1,3.3C11.3,13.5,14.1,14.2,14.1,16.4z M11.3,8.7
+		c-0.4-1.3-1.5-2.2-2.5-2C7.8,7,7.3,8.3,7.7,9.7c0.4,1.3,1.5,2.2,2.5,2C11.2,11.4,11.7,10.1,11.3,8.7z M9.5,14.8
+		c-1.7,0.1-3,1.2-2.9,2.3c0.1,1.2,1.5,2,3.2,1.9c1.7-0.1,3-1.2,2.9-2.3C12.6,15.5,11.2,14.7,9.5,14.8z"></path>
+</svg>
+</a></li>
+            <li class="social-icon"><a href="http://linkedin.com/company/treehouse-island-inc-" target="_blank" title="LinkedIn"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M17,18H7c-0.6,0-1-0.4-1-1V7c0-0.6,0.4-1,1-1h10c0.6,0,1,0.4,1,1v10C18,17.6,17.6,18,17,18z
+		M8,16h1.7v-5.4H8V16z M8.9,8c-0.6,0-1,0.4-1,0.9c0,0.5,0.4,0.9,0.9,0.9h0c0.6,0,1-0.4,1-0.9C9.9,8.4,9.5,8,8.9,8z M15.9,12.9
+		c0-1.7-0.8-2.4-2-2.4c-0.9,0-1.3,0.5-1.5,0.9v-0.8h-1.7c0,0.5,0,5.4,0,5.4h1.7v-3c0-0.2,0-0.3,0.1-0.4c0.1-0.3,0.4-0.7,0.9-0.7
+		c0.6,0,0.9,0.5,0.9,1.2V16h1.7V12.9z M12.4,11.4C12.4,11.4,12.4,11.4,12.4,11.4L12.4,11.4L12.4,11.4z"></path>
+</svg>
+</a></li>
+            <li class="social-icon"><a href="http://instagram.com/teamtreehouse" target="_blank" title="Instagram"><svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M17,19H7c-1.1,0-2-0.9-2-2V7c0-1.1,0.9-2,2-2h10c1.1,0,2,0.9,2,2v10C19,18.1,18.1,19,17,19z
+		M12,10c-1.1,0-2,0.9-2,2s0.9,2,2,2s2-0.9,2-2S13.1,10,12,10z M16,7c-0.6,0-1,0.4-1,1s0.4,1,1,1c0.6,0,1-0.4,1-1S16.6,7,16,7z
+		M17,12h-1c0,2.2-1.8,4-4,4s-4-1.8-4-4H7v4c0,0.6,0.4,1,1,1h8c0.6,0,1-0.4,1-1V12z"></path>
+</svg>
+</a></li>
+          <li id="about"><a href="http://teamtreehouse.com/about">About Treehouse</a></li>
+          <li id="privacy"><a href="http://teamtreehouse.com/privacy" rel="nofollow">Privacy Policy</a></li>
+          <li id="terms"><a href="http://teamtreehouse.com/terms" rel="nofollow">Terms &amp; Conditions</a></li>
+          <li id="copyright">2014 Treehouse Island, Inc.</li>
+        </ul>
+      </footer>
+    </div>
+
+     <!-- yields content from within treehouse-tour paths. Find helper in application.helper -->
+
+<div class="modal" data-featurette="modal" data-uncloseable="true" id="track_completed" style="; display: none;">
+  <div class="grid-container">
+    <div class="grid-50 grid-parent centered">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="achievement-hero track-complete">
+            <img alt="Icon track complete" class="check-complete" src="./Joining Tables and Aliasing_files/icon-track-complete-d8254100d1405684653810c5d6cbcb78.svg">
+            <p>
+              <span class="points-total">5,084</span>
+              points earned
+            </p>
+          </div>
+
+          <div class="modal-callout">
+            <h2>Congratulations!</h2>
+            <p>You have completed the <strong>Front End Web Development</strong> Track!</p>
+          </div>
+
+          <div class="form-footer">
+
+            <a class="button icon-on-right" href="http://teamtreehouse.com/tracks/front-end-web-development">Review Track <svg class="right-arrow" preserveAspectRatio="xMinYMin meet" viewBox="0 0 81 72" enable-background="new 0 0 81 72" xml:space="preserve">
+<path d="M9,26.5h41L38.7,15.3c-3.6-3.6-3.6-9.5,0-13c3.6-3.6,9.5-3.6,13.1,0l26.5,26.1c1.3,1.8,2.2,3.6,2.2,5.4v0.5
+	c0.4,0.4,0.4,0.9,0.4,1.3l0,0l0,0c0,0.5,0,0.9,0,1.8v0.5c-0.4,1.8-0.9,3.6-2.2,5L52.2,69.3c-3.6,3.6-9.5,3.6-13.1,0
+	c-3.6-3.6-3.6-9.5,0-13L50,44.5H9c-5,0-9-4-9-9C0,30.6,4,26.5,9,26.5z"></path>
+</svg>
+</a>
+
+              <div class="social-button-container">
+                <div class="button button-secondary button-share">
+                  Share
+                  <span class="icon icon-share"></span>
+                  <div class="tooltip tooltip-top">
+                          <div class="button-social button-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-url="none" data-text="I just completed the Front End Web Development Track on @treehouse: http://teamtreehouse.com/tracks/front-end-web-development" data-count="none">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
+
+                          <div class="button-social button-google-plus">
+        <div class="g-plusone" data-size="medium" data-annotation="none" data-href="http://teamtreehouse.com/tracks/front-end-web-development"></div>
+      </div>
+
+                          <div class="button-social button-facebook"><div class="fb-like" data-send="false" data-layout="button_count" data-width="50" data-show-faces="false" data-href="http://teamtreehouse.com/tracks/front-end-web-development"></div></div>
+
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div><div class="modal" data-featurette="badge-video-modal" data-uncloseable="true" id="badge-video-modal" style="; display: none;">
+  <div class="grid-container">
+    <div class="grid-60 grid-parent centered">
+      <div class="contained">
+        <div class="achievement-rewards">
+
+          <div class="achievement-rewards-callout">
+            <div class="points-earned">
+              <img src="./Joining Tables and Aliasing_files/icon-points-earned-monochrome-da47edc45054fb2909bed98ce45af546.svg">
+              <sup>+</sup><strong>30</strong>
+            </div>
+            <div class="badge-earned">
+              <img alt="Joining Relational Data Between Tables in SQL" src="./Joining Tables and Aliasing_files/badges_DD_Database_Stage5.png">
+              <strong>Complete</strong>
+              <h3>Joining Relational Data Between Tables in SQL</h3>
+            </div>
+          </div>
+
+          <div id="reward-video" style="display: none;" class="video-container">
+            <div id="reward-video-container">
+              
+
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-100">
+          <div class="modal-callout">
+            <h2>Way to go!</h2>
+            <p>You just earned the <strong>Joining Relational Data Between Tables in SQL</strong> badge! You also unlocked a new chapter in the adventure.</p>
+          </div>
+
+          <div class="form-footer">
+              <div id="track-completed-footer" style="display:none">
+                <a class="button" data-featurette="modal-trigger" data-stack="true" data-target="track_completed" href="http://teamtreehouse.com/library/joining-tables-and-aliasing-2#" id="featurette-5">
+                  Complete Track
+</a>              </div>
+            <div id="badge-awarded-footer">
+                <a class="button icon-on-right button-awarded" href="http://teamtreehouse.com/library/database-foundations/introduction-to-data-databases-and-sql-2">
+    Next Stage <svg class="right-arrow" preserveAspectRatio="xMinYMin meet" viewBox="0 0 81 72" enable-background="new 0 0 81 72" xml:space="preserve">
+<path d="M9,26.5h41L38.7,15.3c-3.6-3.6-3.6-9.5,0-13c3.6-3.6,9.5-3.6,13.1,0l26.5,26.1c1.3,1.8,2.2,3.6,2.2,5.4v0.5
+	c0.4,0.4,0.4,0.9,0.4,1.3l0,0l0,0c0,0.5,0,0.9,0,1.8v0.5c-0.4,1.8-0.9,3.6-2.2,5L52.2,69.3c-3.6,3.6-9.5,3.6-13.1,0
+	c-3.6-3.6-3.6-9.5,0-13L50,44.5H9c-5,0-9-4-9-9C0,30.6,4,26.5,9,26.5z"></path>
+</svg>
+
+</a>
+<div class="modal-centered-content">
+  <h1 class="freeacc"> Want a free account? </h1>
+
+  <p>Invite 5 friends to sign-up for a full account and yours becomes free!<br>Click one of the icons below to share with your friends or <strong><a class="modal-link" href="https://teamtreehouse.com/account/referrals" target="_blank">Learn more here »</a></strong></p><strong>
+
+  <ul class="modal-icons">
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=I+just+earned+the+Joining%20Relational%20Data%20Between%20Tables%20in%20SQL+badge+on+@treehouse!+Come+join+me+%26+get+50%25+off+your+1st+month!+http://referrals.trhou.se/venessiel" target="_blank" class="featurette" data-featurette="analytics-event-link" data-category="Social" data-action="Click" data-label="Referral: Twitter" data-value="venessiel" id="featurette-6">
+        <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M19,8.3c-0.5,0.2-1,0.4-1.5,0.4c0.6-0.3,1-0.9,1.2-1.5c-0.5,0.3-1.1,0.5-1.7,0.7C16.5,7.3,15.8,7,15,7
+		c-1.5,0-2.7,1.2-2.7,2.8c0,0.2,0,0.4,0.1,0.6c-2.2-0.1-4.2-1.2-5.5-2.9C6.7,7.9,6.5,8.4,6.5,8.9c0,1,0.4,1.8,1.2,2.3
+		c-0.4,0-1.2-0.1-1.2-0.3c0,0,0,0,0,0c0,1.3,0.9,2.5,2.2,2.7c-0.2,0.1-0.4,0.1-0.7,0.1c-0.2,0-0.3,0-0.5-0.1c0.3,1.1,1.3,1.9,2.5,1.9
+		c-0.9,0.7-2.1,1.2-3.3,1.2c-0.2,0-0.4,0-0.6,0c1.2,0.8,2.6,1.2,4.1,1.2c4.9,0,7.6-4.2,7.6-7.9c0-0.1,0-0.2,0-0.4
+		C18.2,9.4,18.6,8.9,19,8.3z"></path>
+</svg>
+
+      </a>
+    </li>
+
+    <li>
+      <a href="http://www.facebook.com/share.php?u=I+just+earned+the+Joining%20Relational%20Data%20Between%20Tables%20in%20SQL+badge+on+@treehouse!+Come+join+me+%26+get+50%25+off+your+1st+month!+http://referrals.trhou.se/venessiel" target="_blank" class="featurette" data-featurette="analytics-event-link" data-category="Social" data-action="Click" data-label="Referral: Facebook" data-value="venessiel" id="featurette-7">
+       <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M7,12h2v8h3v-8h3l0.7-3H12c0,0-0.3-1.1,0.2-1.5c0.3-0.2,0.7-0.4,1.3-0.4c0.6,0,1.1,0.3,1.7,0.6l0.9-2.9
+		c-1.1-0.3-2-0.6-3.2-0.6c-1.1,0-1.8,0.2-2.5,0.5C9.7,4.9,9.4,5.5,9.1,5.9C8.9,6.4,8.7,6.8,8.7,7.8V9H7L7,12z"></path>
+</svg>
+
+      </a>
+    </li>
+    <li>
+      <a data-action="share" href="https://plus.google.com/share?url=I+just+earned+the+Joining%20Relational%20Data%20Between%20Tables%20in%20SQL+badge+on+@treehouse!+Come+join+me+%26+get+50%25+off+your+1st+month!+http://referrals.trhou.se/venessiel" target="_blank" class="featurette" data-featurette="analytics-event-link" data-category="Social" data-label="Referral: Google" data-value="venessiel" id="featurette-8">
+        <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M17.9,7.9v1.8h-0.9V7.9h-1.8V7.1h1.8V5.3h0.9v1.8h1.8v0.9H17.9z M14.1,16.4
+		c0,3.8-4.9,3.6-4.9,3.6s-4.2,0.1-4.2-2.9s4.8-2.9,5.1-2.9c-0.1-0.7-0.5-0.6-0.5-0.9v-0.8c0,0-3.6,0.4-3.6-3S9.9,6,9.9,6h4.1
+		c0,0.6-1.9,0.4-1.9,0.7c1.1,0.5,1.2,1.2,1.2,2.5c0,2.1-2.1,2.4-2.1,3.3C11.3,13.5,14.1,14.2,14.1,16.4z M11.3,8.7
+		c-0.4-1.3-1.5-2.2-2.5-2C7.8,7,7.3,8.3,7.7,9.7c0.4,1.3,1.5,2.2,2.5,2C11.2,11.4,11.7,10.1,11.3,8.7z M9.5,14.8
+		c-1.7,0.1-3,1.2-2.9,2.3c0.1,1.2,1.5,2,3.2,1.9c1.7-0.1,3-1.2,2.9-2.3C12.6,15.5,11.2,14.7,9.5,14.8z"></path>
+</svg>
+
+      </a>
+    </li>
+  </ul>
+</strong></div><strong>
+
+
+            </strong></div><strong>
+          </strong></div><strong>
+        </strong></div><strong>
+      </strong></div><strong>
+    </strong></div><strong>
+  </strong></div><strong>
+</strong></div><div class="modal modal-content-feedback" data-featurette="content-feedback-modal" id="content_feedback" style="; display: none;"><strong>
+  <div class="grid-container">
+    <div class="grid-40 grid-parent centered">
+
+      <div class="contained">
+        <div class="grid-100 secondary-heading">
+          <a id="close-content-feedback" class="close-modal modal-close"><span class="icon icon-close"></span></a>
+          <h1>Please rate the quality of this code challenge</h1>
+        </div>
+        <form method="POST" action="http://teamtreehouse.com/library/content-feedback">
+          <ul class="content-feedback-choices content-feedback-stars">
+            <li>
+              <label for="star-1" class="content-feedback-star">
+                <input type="radio" id="star-1" name="feedback[rating]" value="1" class="placeholder-processed">
+                <span class="icon icon-star-rating"></span>
+              </label>
+            </li>
+            <li>
+              <label for="star-2" class="content-feedback-star">
+                <input type="radio" id="star-2" name="feedback[rating]" value="2" class="placeholder-processed">
+                <span class="icon icon-star-rating"></span>
+              </label>
+            </li>
+            <li>
+              <label for="star-3" class="content-feedback-star">
+                <input type="radio" id="star-3" name="feedback[rating]" value="3" class="placeholder-processed">
+                <span class="icon icon-star-rating"></span>
+              </label>
+            </li>
+            <li>
+              <label for="star-4" class="content-feedback-star">
+                <input type="radio" id="star-4" name="feedback[rating]" value="4" class="placeholder-processed">
+                <span class="icon icon-star-rating"></span>
+              </label>
+            </li>
+            <li>
+              <label for="star-5" class="content-feedback-star">
+                <input type="radio" id="star-5" name="feedback[rating]" value="5" class="placeholder-processed">
+                <span class="icon icon-star-rating"></span>
+              </label>
+            </li>
+          </ul>
+
+          <input type="hidden" name="feedback[step_id]" value="250" class="placeholder-processed">
+          <input type="hidden" name="feedback[step_type]" value="CodeChallenge" class="placeholder-processed">
+          <input type="hidden" name="feedback[content_feedback_question_id]" value="172" class="placeholder-processed">
+
+          <div class="grid-100">
+            <div class="form-item">
+              <label for="content-feedback-input" class="in-field-label-processed">Tell us more...</label>
+              <span class="label-optional">(optional)</span>
+              <textarea name="feedback[comments]" class="expanding-input autogrow autogrow-processed placeholder-processed" id="content-feedback-input" style="overflow: hidden; word-wrap: break-word; height: 71px;"></textarea>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="button primary icon-on-right hidden">Send feedback <svg class="right-arrow" preserveAspectRatio="xMinYMin meet" viewBox="0 0 81 72" enable-background="new 0 0 81 72" xml:space="preserve">
+<path d="M9,26.5h41L38.7,15.3c-3.6-3.6-3.6-9.5,0-13c3.6-3.6,9.5-3.6,13.1,0l26.5,26.1c1.3,1.8,2.2,3.6,2.2,5.4v0.5
+	c0.4,0.4,0.4,0.9,0.4,1.3l0,0l0,0c0,0.5,0,0.9,0,1.8v0.5c-0.4,1.8-0.9,3.6-2.2,5L52.2,69.3c-3.6,3.6-9.5,3.6-13.1,0
+	c-3.6-3.6-3.6-9.5,0-13L50,44.5H9c-5,0-9-4-9-9C0,30.6,4,26.5,9,26.5z"></path>
+</svg>
+</button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+</strong></div><div class="modal" data-featurette="modal" data-uncloseable="true" id="badge-modal" style="; display: none;"><strong>
+
+
+  <div class="grid-container">
+    <div class="grid-55 grid-parent centered">
+      <div class="contained">
+        <div class="grid-100 testerbadge">
+          <div class="achievement-hero
+          content-feedback-hero
+          ">
+            <div class="achievement-badge">
+              <img alt="Joining Relational Data Between Tables in SQL" src="./Joining Tables and Aliasing_files/badges_DD_Database_Stage5.png">
+              <span class="icon icon-complete stage-completed"></span>
+              <div class="points-earned">
+                <sup>+</sup><h3>30</h3>
+                <span class="icon icon-points-earned-monochrome"></span>
+              </div>
+            </div>
+
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="403px" height="260px" viewBox="50.5 -43.39 403 260" enable-background="new 50.5 -43.39 403 260" xml:space="preserve">
+              <ellipse opacity="0.3" fill="#C0C8CD" cx="149.915" cy="192.323" rx="8.245" ry="8.286"></ellipse>
+              <ellipse opacity="0.5" fill="#C0C8CD" cx="427.004" cy="149.033" rx="11.426" ry="11.484"></ellipse>
+              <ellipse opacity="0.4" fill="#C0C8CD" cx="433.504" cy="-0.848" rx="17.927" ry="18.015"></ellipse>
+              <path opacity="0.2" fill="#C0C8CD" d="M90.979,66.513c-0.344-0.478-0.756-0.684-3.005-1.232c-1.109-0.27-2.631-0.605-4.507-1
+              c-2.171-0.454-4.339-0.88-5.511-1.108c-0.258-1.074-0.73-2.988-1.271-4.985c-1.383-5.094-2.152-6.792-2.625-7.53
+              c-0.324-0.851-1.031-1.003-1.26-1.027c-0.035-0.004-0.066-0.008-0.1-0.008c-0.033-0.006-0.068-0.013-0.1-0.017
+              c-0.227-0.024-0.949-0.041-1.462,0.714c-0.625,0.605-1.762,2.085-4.263,6.725c-0.984,1.822-1.875,3.576-2.371,4.564
+              c-1.191-0.047-3.4-0.127-5.617-0.186c-1.919-0.048-3.472-0.069-4.616-0.061c-2.312,0.018-2.763,0.124-3.201,0.507
+              c-0.354,0.312-0.557,0.754-0.57,1.244c-0.023,0.831,0.303,2.027,4.517,6.621c1.365,1.484,2.744,2.896,3.541,3.699
+              c-0.531,1.191-1.521,3.411-2.479,5.643c-0.826,1.921-1.468,3.477-1.91,4.625c-0.84,2.174-1.062,2.937-0.48,3.677
+              c0.203,0.259,0.59,0.582,1.268,0.661c0.513,0.061,1.718,0.2,7.991-2.278c2.402-0.952,4.671-1.938,5.882-2.485
+              c1.053,0.813,3.041,2.292,5.164,3.77c5.542,3.852,6.747,3.991,7.263,4.05c0.675,0.08,1.123-0.148,1.382-0.355
+              c0.73-0.583,0.688-1.377,0.365-3.686c-0.17-1.219-0.439-2.881-0.807-4.942c-0.43-2.393-0.888-4.783-1.134-6.065
+              c0.962-0.6,2.621-1.654,4.286-2.789c5.146-3.505,5.738-4.594,5.902-5.411C91.351,67.373,91.255,66.895,90.979,66.513z"></path>
+              <path opacity="0.3" fill="#C0C8CD" d="M448.177,80.155c-0.38-0.124-0.695-0.068-2.162,0.556c-0.726,0.309-1.698,0.75-2.899,1.307
+              c-1.388,0.645-2.76,1.302-3.501,1.658c-0.58-0.488-1.621-1.351-2.737-2.232c-2.847-2.248-3.967-2.869-4.525-3.083
+              c-0.528-0.335-0.982-0.128-1.122-0.048c-0.021,0.011-0.034,0.021-0.054,0.036c-0.021,0.008-0.04,0.021-0.06,0.032
+              c-0.137,0.08-0.544,0.369-0.52,0.997c-0.095,0.594-0.123,1.879,0.391,5.48c0.197,1.414,0.421,2.75,0.552,3.501
+              c-0.681,0.465-1.938,1.33-3.185,2.214c-1.079,0.765-1.946,1.393-2.577,1.869c-1.272,0.963-1.476,1.207-1.562,1.601
+              c-0.072,0.317,0,0.644,0.192,0.923c0.323,0.469,0.993,0.996,5.199,1.799c1.362,0.26,2.703,0.471,3.471,0.587
+              c0.19,0.879,0.554,2.514,0.937,4.145c0.327,1.402,0.606,2.528,0.83,3.346c0.423,1.547,0.614,2.062,1.234,2.23
+              c0.217,0.059,0.564,0.081,0.971-0.156c0.307-0.179,1.034-0.599,3.488-4.555c0.941-1.516,1.792-2.997,2.236-3.8
+              c0.918,0.015,2.619,0.014,4.398-0.044c4.634-0.155,5.358-0.576,5.671-0.753c0.406-0.236,0.561-0.546,0.619-0.766
+              c0.167-0.626-0.184-1.046-1.304-2.19c-0.588-0.605-1.418-1.412-2.463-2.401c-1.216-1.149-2.44-2.28-3.102-2.888
+              c0.287-0.727,0.774-1.995,1.231-3.31c1.412-4.061,1.297-4.908,1.055-5.426C448.733,80.478,448.484,80.254,448.177,80.155z"></path>
+              <polygon opacity="0.4" fill="#C0C8CD" points="105.558,148.514 90.442,140.766 98.152,125.574 113.269,133.323 "></polygon>
+              <rect x="381.956" y="-43.39" opacity="0.3" fill="#C0C8CD" width="8.5" height="8.543"></rect>
+              <ellipse opacity="0.3" fill="#C0C8CD" cx="117.843" cy="25.268" rx="8.003" ry="8.045"></ellipse>
+            </svg>
+
+              <div class="content-feedback">
+                <a class="feedback-callout" data-featurette="modal-trigger" data-stack="true" data-target="content_feedback" href="http://teamtreehouse.com/library/joining-tables-and-aliasing-2#" id="featurette-11">
+                <p><strong>Give feedback</strong> on this challenge so we can help you learn more effectively.</p>
+</a>              </div>
+
+          </div>
+
+          <div class="modal-callout">
+            
+            <p class="text-centered">Way to go! You just earned the <strong>Joining Relational Data Between Tables in SQL</strong> badge!</p>
+          </div>
+
+          <div class="form-footer">
+              <div id="track-completed-footer" style="display:none">
+                <a class="button" data-featurette="modal-trigger" data-stack="true" data-target="track_completed" href="http://teamtreehouse.com/library/joining-tables-and-aliasing-2#" id="featurette-12">
+                  Complete Track
+</a>              </div>
+            <div id="badge-awarded-footer">
+                <a class="button icon-on-right button-awarded" href="http://teamtreehouse.com/library/database-foundations/introduction-to-data-databases-and-sql-2">
+    Next Stage <svg class="right-arrow" preserveAspectRatio="xMinYMin meet" viewBox="0 0 81 72" enable-background="new 0 0 81 72" xml:space="preserve">
+<path d="M9,26.5h41L38.7,15.3c-3.6-3.6-3.6-9.5,0-13c3.6-3.6,9.5-3.6,13.1,0l26.5,26.1c1.3,1.8,2.2,3.6,2.2,5.4v0.5
+	c0.4,0.4,0.4,0.9,0.4,1.3l0,0l0,0c0,0.5,0,0.9,0,1.8v0.5c-0.4,1.8-0.9,3.6-2.2,5L52.2,69.3c-3.6,3.6-9.5,3.6-13.1,0
+	c-3.6-3.6-3.6-9.5,0-13L50,44.5H9c-5,0-9-4-9-9C0,30.6,4,26.5,9,26.5z"></path>
+</svg>
+
+</a>
+<div class="modal-centered-content">
+  <h1 class="freeacc"> Want a free account? </h1>
+
+  <p>Invite 5 friends to sign-up for a full account and yours becomes free!<br>Click one of the icons below to share with your friends or <strong><a class="modal-link" href="https://teamtreehouse.com/account/referrals" target="_blank">Learn more here »</a></strong></p><strong>
+
+  <ul class="modal-icons">
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=I+just+earned+the+Joining%20Relational%20Data%20Between%20Tables%20in%20SQL+badge+on+@treehouse!+Come+join+me+%26+get+50%25+off+your+1st+month!+http://referrals.trhou.se/venessiel" target="_blank" class="featurette" data-featurette="analytics-event-link" data-category="Social" data-action="Click" data-label="Referral: Twitter" data-value="venessiel" id="featurette-13">
+        <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M19,8.3c-0.5,0.2-1,0.4-1.5,0.4c0.6-0.3,1-0.9,1.2-1.5c-0.5,0.3-1.1,0.5-1.7,0.7C16.5,7.3,15.8,7,15,7
+		c-1.5,0-2.7,1.2-2.7,2.8c0,0.2,0,0.4,0.1,0.6c-2.2-0.1-4.2-1.2-5.5-2.9C6.7,7.9,6.5,8.4,6.5,8.9c0,1,0.4,1.8,1.2,2.3
+		c-0.4,0-1.2-0.1-1.2-0.3c0,0,0,0,0,0c0,1.3,0.9,2.5,2.2,2.7c-0.2,0.1-0.4,0.1-0.7,0.1c-0.2,0-0.3,0-0.5-0.1c0.3,1.1,1.3,1.9,2.5,1.9
+		c-0.9,0.7-2.1,1.2-3.3,1.2c-0.2,0-0.4,0-0.6,0c1.2,0.8,2.6,1.2,4.1,1.2c4.9,0,7.6-4.2,7.6-7.9c0-0.1,0-0.2,0-0.4
+		C18.2,9.4,18.6,8.9,19,8.3z"></path>
+</svg>
+
+      </a>
+    </li>
+
+    <li>
+      <a href="http://www.facebook.com/share.php?u=I+just+earned+the+Joining%20Relational%20Data%20Between%20Tables%20in%20SQL+badge+on+@treehouse!+Come+join+me+%26+get+50%25+off+your+1st+month!+http://referrals.trhou.se/venessiel" target="_blank" class="featurette" data-featurette="analytics-event-link" data-category="Social" data-action="Click" data-label="Referral: Facebook" data-value="venessiel" id="featurette-14">
+       <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M7,12h2v8h3v-8h3l0.7-3H12c0,0-0.3-1.1,0.2-1.5c0.3-0.2,0.7-0.4,1.3-0.4c0.6,0,1.1,0.3,1.7,0.6l0.9-2.9
+		c-1.1-0.3-2-0.6-3.2-0.6c-1.1,0-1.8,0.2-2.5,0.5C9.7,4.9,9.4,5.5,9.1,5.9C8.9,6.4,8.7,6.8,8.7,7.8V9H7L7,12z"></path>
+</svg>
+
+      </a>
+    </li>
+    <li>
+      <a data-action="share" href="https://plus.google.com/share?url=I+just+earned+the+Joining%20Relational%20Data%20Between%20Tables%20in%20SQL+badge+on+@treehouse!+Come+join+me+%26+get+50%25+off+your+1st+month!+http://referrals.trhou.se/venessiel" target="_blank" class="featurette" data-featurette="analytics-event-link" data-category="Social" data-label="Referral: Google" data-value="venessiel" id="featurette-15">
+        <svg preserveAspectRatio="xMinYMin meet" viewBox="0 0 24 24">
+	<path d="M17.9,7.9v1.8h-0.9V7.9h-1.8V7.1h1.8V5.3h0.9v1.8h1.8v0.9H17.9z M14.1,16.4
+		c0,3.8-4.9,3.6-4.9,3.6s-4.2,0.1-4.2-2.9s4.8-2.9,5.1-2.9c-0.1-0.7-0.5-0.6-0.5-0.9v-0.8c0,0-3.6,0.4-3.6-3S9.9,6,9.9,6h4.1
+		c0,0.6-1.9,0.4-1.9,0.7c1.1,0.5,1.2,1.2,1.2,2.5c0,2.1-2.1,2.4-2.1,3.3C11.3,13.5,14.1,14.2,14.1,16.4z M11.3,8.7
+		c-0.4-1.3-1.5-2.2-2.5-2C7.8,7,7.3,8.3,7.7,9.7c0.4,1.3,1.5,2.2,2.5,2C11.2,11.4,11.7,10.1,11.3,8.7z M9.5,14.8
+		c-1.7,0.1-3,1.2-2.9,2.3c0.1,1.2,1.5,2,3.2,1.9c1.7-0.1,3-1.2,2.9-2.3C12.6,15.5,11.2,14.7,9.5,14.8z"></path>
+</svg>
+
+      </a>
+    </li>
+  </ul>
+</strong></div><strong>
+
+
+            </strong></div><strong>
+          </strong></div><strong>
+
+        </strong></div><strong>
+      </strong></div><strong>
+    </strong></div><strong>
+  </strong></div><strong>
+</strong></strong></div><div class="modal" data-featurette="modal" data-uncloseable="true" id="challenge-completed-modal" style="; display: none;"><strong><strong>
+  <div class="grid-container">
+    <div class="grid-40 grid-parent centered">
+      <div class="contained">
+        <div class="grid-100">
+          <div class="achievement-hero
+          content-feedback-hero
+          ">
+            <div class="points-earned">
+              <sup>+</sup><h3>12</h3>
+              <p>Points</p>
+              <span class="icon icon-points-earned"></span>
+            </div>
+
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="403px" height="260px" viewBox="50.5 -43.39 403 260" enable-background="new 50.5 -43.39 403 260" xml:space="preserve">
+              <ellipse opacity="0.3" fill="#C0C8CD" cx="149.915" cy="192.323" rx="8.245" ry="8.286"></ellipse>
+              <ellipse opacity="0.5" fill="#C0C8CD" cx="427.004" cy="149.033" rx="11.426" ry="11.484"></ellipse>
+              <ellipse opacity="0.4" fill="#C0C8CD" cx="433.504" cy="-0.848" rx="17.927" ry="18.015"></ellipse>
+              <path opacity="0.2" fill="#C0C8CD" d="M90.979,66.513c-0.344-0.478-0.756-0.684-3.005-1.232c-1.109-0.27-2.631-0.605-4.507-1
+              c-2.171-0.454-4.339-0.88-5.511-1.108c-0.258-1.074-0.73-2.988-1.271-4.985c-1.383-5.094-2.152-6.792-2.625-7.53
+              c-0.324-0.851-1.031-1.003-1.26-1.027c-0.035-0.004-0.066-0.008-0.1-0.008c-0.033-0.006-0.068-0.013-0.1-0.017
+              c-0.227-0.024-0.949-0.041-1.462,0.714c-0.625,0.605-1.762,2.085-4.263,6.725c-0.984,1.822-1.875,3.576-2.371,4.564
+              c-1.191-0.047-3.4-0.127-5.617-0.186c-1.919-0.048-3.472-0.069-4.616-0.061c-2.312,0.018-2.763,0.124-3.201,0.507
+              c-0.354,0.312-0.557,0.754-0.57,1.244c-0.023,0.831,0.303,2.027,4.517,6.621c1.365,1.484,2.744,2.896,3.541,3.699
+              c-0.531,1.191-1.521,3.411-2.479,5.643c-0.826,1.921-1.468,3.477-1.91,4.625c-0.84,2.174-1.062,2.937-0.48,3.677
+              c0.203,0.259,0.59,0.582,1.268,0.661c0.513,0.061,1.718,0.2,7.991-2.278c2.402-0.952,4.671-1.938,5.882-2.485
+              c1.053,0.813,3.041,2.292,5.164,3.77c5.542,3.852,6.747,3.991,7.263,4.05c0.675,0.08,1.123-0.148,1.382-0.355
+              c0.73-0.583,0.688-1.377,0.365-3.686c-0.17-1.219-0.439-2.881-0.807-4.942c-0.43-2.393-0.888-4.783-1.134-6.065
+              c0.962-0.6,2.621-1.654,4.286-2.789c5.146-3.505,5.738-4.594,5.902-5.411C91.351,67.373,91.255,66.895,90.979,66.513z"></path>
+              <path opacity="0.3" fill="#C0C8CD" d="M448.177,80.155c-0.38-0.124-0.695-0.068-2.162,0.556c-0.726,0.309-1.698,0.75-2.899,1.307
+              c-1.388,0.645-2.76,1.302-3.501,1.658c-0.58-0.488-1.621-1.351-2.737-2.232c-2.847-2.248-3.967-2.869-4.525-3.083
+              c-0.528-0.335-0.982-0.128-1.122-0.048c-0.021,0.011-0.034,0.021-0.054,0.036c-0.021,0.008-0.04,0.021-0.06,0.032
+              c-0.137,0.08-0.544,0.369-0.52,0.997c-0.095,0.594-0.123,1.879,0.391,5.48c0.197,1.414,0.421,2.75,0.552,3.501
+              c-0.681,0.465-1.938,1.33-3.185,2.214c-1.079,0.765-1.946,1.393-2.577,1.869c-1.272,0.963-1.476,1.207-1.562,1.601
+              c-0.072,0.317,0,0.644,0.192,0.923c0.323,0.469,0.993,0.996,5.199,1.799c1.362,0.26,2.703,0.471,3.471,0.587
+              c0.19,0.879,0.554,2.514,0.937,4.145c0.327,1.402,0.606,2.528,0.83,3.346c0.423,1.547,0.614,2.062,1.234,2.23
+              c0.217,0.059,0.564,0.081,0.971-0.156c0.307-0.179,1.034-0.599,3.488-4.555c0.941-1.516,1.792-2.997,2.236-3.8
+              c0.918,0.015,2.619,0.014,4.398-0.044c4.634-0.155,5.358-0.576,5.671-0.753c0.406-0.236,0.561-0.546,0.619-0.766
+              c0.167-0.626-0.184-1.046-1.304-2.19c-0.588-0.605-1.418-1.412-2.463-2.401c-1.216-1.149-2.44-2.28-3.102-2.888
+              c0.287-0.727,0.774-1.995,1.231-3.31c1.412-4.061,1.297-4.908,1.055-5.426C448.733,80.478,448.484,80.254,448.177,80.155z"></path>
+              <polygon opacity="0.4" fill="#C0C8CD" points="105.558,148.514 90.442,140.766 98.152,125.574 113.269,133.323 "></polygon>
+              <rect x="381.956" y="-43.39" opacity="0.3" fill="#C0C8CD" width="8.5" height="8.543"></rect>
+              <ellipse opacity="0.3" fill="#C0C8CD" cx="117.843" cy="25.268" rx="8.003" ry="8.045"></ellipse>
+            </svg>
+
+            <div class="content-feedback">
+              <a class="feedback-callout" data-featurette="modal-trigger" data-stack="true" data-target="content_feedback" href="http://teamtreehouse.com/library/joining-tables-and-aliasing-2#" id="featurette-17">
+              <p><strong>Give feedback</strong> on this challenge so we can help you learn more effectively.</p>
+</a>            </div>
+
+          </div>
+
+          <div class="modal-callout">
+            <h2>Nice work!</h2>
+            <p>You just earned an additional <strong>12 points</strong> for completing the Joining Tables and Aliasing challenge!</p>
+          </div>
+
+          <div class="form-footer">
+              <a class="button button-secondary" href="http://teamtreehouse.com/library/database-foundations/joining-relational-data-between-tables-in-sql">
+                Review stage
+</a>          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</strong></strong></div><div class="modal" data-featurette="code-challenge-error-modal" id="code-challenge-error-modal" style="; display: none;"><strong><strong>
+  <div class="grid-container">
+    <div class="grid-35 grid-parent centered">
+      <div class="contained">
+        <div class="grid-100 secondary-heading">
+          <a id="close-content-feedback" class="close-modal modal-close"><span class="icon icon-close"></span></a>
+          <h1>Oh no!</h1>
+        </div>
+        <div class="grid-100">
+          <div class="modal-callout">
+            <p id="challenge-error-modal-text"></p>
+            <p>If you continue experiencing problems, please contact support at <a href="mailto:help@teamtreehouse.com">help@teamtreehouse.com</a>.</p>
+          </div>
+          <div class="form-footer">
+            <a class="button button-primary" href="./Joining Tables and Aliasing_files/Joining Tables and Aliasing.html">
+              <svg class="resume-icon" viewBox="0 0 17 14" preserveAspectRatio="xMinYMin meet">
+	<path d="M10,14c-3.4,0-6.3-2.5-6.9-5.7L2.3,9.3C2,9.8,1.4,9.9,0.9,9.5s-0.5-1-0.2-1.4
+		L3.2,5c0.3-0.4,1-0.5,1.4-0.2l3.2,2.4c0.4,0.3,0.5,1,0.2,1.4S7,9.1,6.5,8.8L5.1,7.7C5.4,10.1,7.5,12,10,12c2.8,0,5-2.2,5-5
+		s-2.2-5-5-5C8.9,2,7.9,2.4,7,3v0C6.9,3.1,6.7,3.1,6.5,3.1c-0.6,0-1-0.4-1-1c0-0.4,0.2-0.7,0.5-0.8H6C7.1,0.5,8.5,0,10,0
+		c3.9,0,7,3.1,7,7S13.9,14,10,14z"></path>
+</svg>
+ Restart Challenge
+</a>            <a class="button icon-on-left" href="http://teamtreehouse.com/library/database-foundations">
+              <svg class="left-arrow" preserveAspectRatio="xMinYMin meet" viewBox="0 0 81 72" enable-background="new 0 0 81 72" xml:space="preserve">
+<path d="M72,45H31.1l11.2,11.2c3.6,3.6,3.6,9.5,0,13c-3.6,3.6-9.5,3.6-13.1,0L2.7,43.2c-1.4-1.8-2.2-3.6-2.2-5.4v-0.5
+	C0,36.9,0,36.5,0,36l0,0l0,0c0-0.5,0-0.9,0-1.8v-0.5c0.5-1.8,0.9-3.6,2.2-4.9L28.8,2.2c3.6-3.6,9.4-3.6,13.1,0
+	c3.6,3.6,3.6,9.4,0,13.1L31.1,27H72c5,0,9,4.1,9,9S77,45,72,45z"></path>
+</svg>
+ Back to overview
+</a>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</strong></strong></div><div class="modal" data-featurette="help-modal" id="contact-form-modal" style="; display: none;"><strong><strong>
+      <div class="grid-container">
+      <div class="grid-60 centered">
+        <div class="contained featurette" data-featurette="help-form" id="help-form">
+          <div class="grid-100 secondary-heading">
+            <h2>Contact Support</h2>
+            <a class="close-modal modal-close"><span class="icon icon-close"></span></a>
+          </div>
+
+          <div class="grid-70">
+
+            <div class="message waiting" style="display: none;">
+              <span class="loading-spinner loading-spinner-large"><span></span></span>
+            </div>
+
+            <div class="message success" style="display: none;">
+              <p><strong>Thanks!</strong> We'll be in touch.</p>
+            </div>
+
+            <form accept-charset="UTF-8" action="http://teamtreehouse.com/contact" class="new_contact_form" id="contact-form" method="post"><div style="display:none"><input name="utf8" type="hidden" value="✓" class="placeholder-processed"><input name="authenticity_token" type="hidden" value="M5lm1ZNXviHTKVtV+CHbr/tmLin6tHdNa3Y9O7fA1Ws=" class="placeholder-processed"></div>
+
+              <div class="message error" style="display: none;">
+                <p>There was a small problem sending your message.</p>
+              </div>
+
+              <input id="contact_form_user_id" name="contact_form[user_id]" type="hidden" value="1834382" class="placeholder-processed">
+              <div class="form-item">
+                <label for="contact_form_name" class="in-field-label-processed" style="display: none;">Name <span>*</span></label>
+                <input id="contact_form_name" name="contact_form[name]" type="text" value="Kamilla Khabibrakhmanova" class="placeholder-processed">
+                <div class="error-message" style="display: none;"></div>
+              </div>
+
+              <div class="form-item">
+                <label for="contact_form_email" class="in-field-label-processed" style="display: none;">Email <span>*</span></label>
+                <input id="contact_form_email" name="contact_form[email]" type="text" value="sophisticatedlace@gmail.com" class="placeholder-processed">
+                <div class="error-message" style="display: none;"></div>
+              </div>
+
+              
+
+              <div class="form-item">
+                <label for="contact_form_message" class="in-field-label-processed">Message <span>*</span></label>
+                <textarea class="form-element placeholder-processed" id="contact_form_message" name="contact_form[message]" rows="2"></textarea>
+                <div class="error-message" style="display: none;"></div>
+              </div>
+
+              <button class="button button-primary">Send Message</button>
+</form>          </div>
+
+          <div class="grid-30">
+            <div class="module secondary-module  contact-alternative">
+              <p>You can also email support requests to:</p>
+              <p><a href="mailto:help@teamtreehouse.com">help<span>@</span>teamtreehouse.com</a></p>
+            </div>
+
+            <div class="module secondary-module contact-alternative">
+              <div class="secondary-heading">
+                <h3>Content questions?</h3>
+              </div>
+              <span class="icon icon-forum"></span>
+              <p>Don't forget you can start a discussion in the <a href="http://teamtreehouse.com/forum">Forum</a>. Treehouse teachers and members are actively discussing topics from course material and other general teaching topics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</strong></strong></div><strong><strong>
+
+<div id="mini-profile-container"></div>
+<div id="tarp" class="modal-tarp" style="display: none;" data-featurette="tarp"></div>
+
+    
+
+    <div id="pubnub" ssl="on" style="position: absolute; top: -1000px;"></div>
+    <script src="./Joining Tables and Aliasing_files/pubnub.min.js"></script>
+    <script>
+      var pubnub = PUBNUB.init({
+        subscribe_key : "sub-e2de2b5c-13c2-11e2-b508-f53fda4cd93d",
+        origin        : 'pubsub.pubnub.com',
+        ssl           : true
+      });
+    </script>
+
+    <script src="./Joining Tables and Aliasing_files/application-9babac4f0a6408638d03c472bfdfaf76.js"></script>
+    
+
+      <div id="fb-root"></div>
+      <script>
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1447543992198627";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+      </script>
+
+      <script type="text/javascript">
+        (function() {
+        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+      </script>
+
+
+      <script type="text/javascript">
+    /* <![CDATA[ */
+    var google_conversion_id = 1017883234;
+    var google_custom_params = window.google_tag_params;
+    var google_remarketing_only = true;
+    /* ]]> */
+  </script>
+  <script type="text/javascript" src="./Joining Tables and Aliasing_files/conversion.js">
+  </script>
+  <noscript>
+    &lt;div style="display:inline;"&gt;
+      &lt;img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1017883234/?value=0&amp;amp;guid=ON&amp;amp;script=0"/&gt;
+    &lt;/div&gt;
+  </noscript>
+
+  <script type="text/javascript">
+    mixpanel.register({visitor_id: 610970802});
+
+    //  ensure we only send this once per day
+    if ($.cookie("mpVisited") === undefined) {
+        mixpanel.track("Visited Site", {path: "/library/joining-tables-and-aliasing-2"},
+          function() { $.cookie("mpVisited", "true", {expires: 1}); });
+        mixpanel.people.increment('daily_visits');
+    }
+
+  </script>
+
+  <script>(function() { var _fbq = window._fbq || (window._fbq = []); if (!_fbq.loaded) { var fbds = document.createElement('script'); fbds.async = true; fbds.src = '//connect.facebook.net/en_US/fbds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fbds, s); _fbq.loaded = true; } _fbq.push(['addPixelId', "688952224481965"]); })(); window._fbq = window._fbq || []; window._fbq.push(["track", "PixelInitialized", {}]); </script> <noscript>&lt;img height="1" width="1" border="0" alt="" style="display:none" src="https://www.facebook.com/tr?id=688952224481965&amp;amp;ev=NoScript" /&gt;</noscript>
+
+
+  <script type="text/javascript">
+    adroll_adv_id = "KIZYNJXKQFHZRL33ET4IIJ";
+    adroll_pix_id = "5SMHKC6AK5D3DJAZBGP4PX";
+
+      adroll_custom_data = { "Id": "1834382" };
+
+    (function () {
+    var oldonload = window.onload;
+    window.onload = function(){
+      __adroll_loaded=true;
+      var scr = document.createElement("script");
+      var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
+      scr.setAttribute('async', 'true');
+      scr.type = "text/javascript";
+      scr.src = host + "/j/roundtrip.js";
+      ((document.getElementsByTagName('head') || [null])[0] ||
+      document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
+      if(oldonload){oldonload()}};
+    }());
+  </script>
+
+  
+
+</strong></strong><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px; padding: 0px; box-sizing: content-box; word-wrap: break-word; overflow: hidden; -webkit-transition: none; transition: none; height: 0px !important; min-height: 0px !important; font-family: &#39;Gotham Rounded A&#39;, &#39;Gotham Rounded B&#39;, &#39;Helvetica Neue&#39;, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; word-spacing: 0px; text-indent: 0px; line-height: 21px; width: 66px;" class="autosizejs placeholder-processed" id="autosizejs"></textarea><script src="http://js-agent.newrelic.com/nr-476.min.js"></script></body></html>
